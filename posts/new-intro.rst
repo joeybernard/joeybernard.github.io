@@ -1,8 +1,8 @@
 .. title: New Intro
 .. slug: new-intro
 .. date: 2020-01-13 10:44:54 UTC-04:00
-.. tags: 
-.. category: 
+.. tags: News 
+.. category: News
 .. link: 
 .. description: 
 .. type: text
