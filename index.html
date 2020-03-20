@@ -1,78 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html prefix="" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="description" content="This a site on science, nature and coding.">
 <meta name="viewport" content="width=device-width">
-<title>Rational Druid | Rational Druid</title>
-<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<title>Rational Druid</title>
+<link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="assets/css/dark.css" rel="stylesheet" type="text/css">
+<link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+<meta name="theme-color" content="#7DFDFE">
+<meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://joeybernard.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/using-git-for-your-config/" type="text/html">
 </head>
-<body class="home blog">
-    <div id="wrap" style="width:850px">
-        <div id="container" style="width:560px">
-            
-            
-        <div class="postbox">
-        <h1><a href="posts/new-intro/">New Intro</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Posted: <time class="published" datetime="2020-01-13T10:44:54-04:00">2020-01-13 10:44</time></span>
-                <br><span class="tags">Tags: 
-                </span>
-            </div>
-        <p>Well, here we go again. I've decided to go with a static generator that is more under my own control. And, I like Python quite a bit - hence moving the site to Nikola.</p>
-            
+<body class="hack dark">
 
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         
+    <header id="header"><h1 id="brand"><a href="https://joeybernard.github.io/" title="Rational Druid" rel="home">
+
+        <span id="blog-title">Rational Druid</span>
+    </a></h1>
+
+        
+
+        
+    <nav id="menu"><ul>
+<li><a href="archive.html">Archive</a></li>
+                <li><a href="categories/">Tags</a></li>
+                <li><a href="rss.xml">RSS feed</a></li>
+
+    
+
+    
+    
+    </ul></nav></header><main id="content"><div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/using-git-for-your-config/" class="u-url">Using git for your config</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Joey Bernard
+            </span></p>
+            <p class="dateline">
+            <a href="posts/using-git-for-your-config/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-03-19T23:14:38-03:00" itemprop="datePublished" title="2020-03-19 23:14">2020-03-19 23:14</time></a>
+            </p>
         </div>
-    
-
-    
-
-    
-
-
-        </div>
-        <div id="sidebar">
-            <!--Sidebar content-->
-            <h1 id="blog-title">
-                <a href="https://joeybernard.github.io/" title="Rational Druid">Rational Druid</a>
-            </h1>
-            
-            
-            <ul class="unstyled">
-<li>
-            
-                <li>
-<a href="archive.html">Archive</a>
-                </li>
-<li>
-<a href="categories/">Tags</a>
-                </li>
-<li>
-<a href="rss.xml">RSS feed</a>
-
-            </li>
-<li>
-            
-            
-            </ul>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Now that my new blog is starting to come together, I need to start moving content over. The first item is the most
+important whenever I setup a new Linux system. Some time ago, I moved all of my user level configuration over to a github
+repository. You can configure a system with the following code:</p>
+<pre class="literal-block">mkdir .myconfig
+echo .myconfig &gt;&gt;.gitignore
+git clone --bare https://github.com/username/myconfig.git $HOME/.myconfig
+alias config='/usr/bin/git --git-dir=$HOME/.myconfig --work-tree=$HOME'
+config checkout</pre>
+<p>You may have some files that already exist in your home directory that you will need to either delete or move aside to
+finish the checkout. It is also helpful to add the config alias to your .bashrc or .profile file so that you have it
+always ready. You need to always use these command line options to git, so you might as well have this alias set to make
+your life easier. Hopefully you find it useful.</p>
 </div>
-        <div id="footer">
-            Contents © 2020         <a href="mailto:druid.bernard@gmail.com">Joey Bernard</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
-            
-        </div>
     </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/new-intro/" class="u-url">New Intro</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Joey Bernard
+            </span></p>
+            <p class="dateline">
+            <a href="posts/new-intro/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-13T10:44:54-04:00" itemprop="datePublished" title="2020-01-13 10:44">2020-01-13 10:44</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Well, here we go again. I've decided to go with a static generator that is more under my own control. And, I like Python quite a bit - hence moving the site to Nikola.</p>
+    </div>
+    </article>
+</div>
+
+
+
+
+
+
+
+         </main><footer id="footer"><p>Contents © 2020         <a href="mailto:druid.bernard@gmail.com">Joey Bernard</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
     
-            <script src="assets/js/all-nocdn.js"></script><script>
-    baguetteBox.run('div#content', {
-        ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
-    </script><!-- Global Site Tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-146153844-1"></script><script>
+    
+
+    
+    
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146153844-1"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid (Posts about howto)</title><link>https://joeybernard.github.io/</link><description></description><atom:link href="https://joeybernard.github.io/categories/cat_howto.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Fri, 20 Mar 2020 02:30:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using git for your config</title><link>https://joeybernard.github.io/posts/using-git-for-your-config/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;Now that my new blog is starting to come together, I need to start moving content over. The first item is the most
+important whenever I setup a new Linux system. Some time ago, I moved all of my user level configuration over to a github
+repository. You can configure a system with the following code:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;mkdir .myconfig
+echo .myconfig &amp;gt;&amp;gt;.gitignore
+git clone --bare https://github.com/username/myconfig.git $HOME/.myconfig
+alias config='/usr/bin/git --git-dir=$HOME/.myconfig --work-tree=$HOME'
+config checkout&lt;/pre&gt;
+&lt;p&gt;You may have some files that already exist in your home directory that you will need to either delete or move aside to
+finish the checkout. It is also helpful to add the config alias to your .bashrc or .profile file so that you have it
+always ready. You need to always use these command line options to git, so you might as well have this alias set to make
+your life easier. Hopefully you find it useful.&lt;/p&gt;&lt;/div&gt;</description><category>git admin</category><guid>https://joeybernard.github.io/posts/using-git-for-your-config/</guid><pubDate>Fri, 20 Mar 2020 02:14:38 GMT</pubDate></item></channel></rss>
