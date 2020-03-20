@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://joeybernard.github.io/categories/cat_howto.xml</loc>
-  <lastmod>2020-03-20T02:26:00Z</lastmod>
+  <lastmod>2020-03-20T02:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://joeybernard.github.io/categories/cat_news.xml</loc>
@@ -15,7 +15,7 @@
  </sitemap>
  <sitemap>
   <loc>https://joeybernard.github.io/categories/git-admin.xml</loc>
-  <lastmod>2020-03-20T02:26:00Z</lastmod>
+  <lastmod>2020-03-20T02:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://joeybernard.github.io/categories/news.xml</loc>
@@ -23,18 +23,18 @@
  </sitemap>
  <sitemap>
   <loc>https://joeybernard.github.io/galleries/demo/rss.xml</loc>
-  <lastmod>2020-03-20T02:12:00Z</lastmod>
+  <lastmod>2020-03-20T02:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://joeybernard.github.io/galleries/rss.xml</loc>
-  <lastmod>2020-03-20T02:12:00Z</lastmod>
+  <lastmod>2020-03-20T02:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://joeybernard.github.io/rss.xml</loc>
-  <lastmod>2020-03-20T02:26:00Z</lastmod>
+  <lastmod>2020-03-20T02:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://joeybernard.github.io/sitemap.xml</loc>
-  <lastmod>2020-03-20T02:26:00Z</lastmod>
+  <lastmod>2020-03-20T02:43:00Z</lastmod>
  </sitemap>
 </sitemapindex>
