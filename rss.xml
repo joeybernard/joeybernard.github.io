@@ -1,5 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Tue, 02 Jun 2020 14:43:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Github Satellite 2020</title><link>https://joeybernard.github.io/posts/github-satellite-2020/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;I have been listening in to the talks being given as part of Github Satellite 2020. They have all been really good. I have been a git user for years, and a lot of this has been on Github. But I really had no idea how much I had been missing. Part of this lack in my own knowledge was due to the fact that I have been working on either solo projects or projects of 2-3 people. Now that I am starting to work in larger groups, I am realizing the power of things like pull requests. This is probably old hat to people who have been working with Github in larger organizations, but it is eye opening to us solo workers. I will definitely be following up further with my new group so that we can actually use all of the tools available.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Wed, 29 Jul 2020 23:47:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Statistics with R</title><link>https://joeybernard.github.io/posts/statistics-with-r/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;R is actually a full programming language, designed around the tasks you tend to need to do when you are doing statistics. It was
+developed at Bell Labs. It is very similar to another statistical programming language, S. Since R and S are programming languages,
+any actual programs are actually implementations of this language. There are commercial implementations available, like S-Plus.
+We'll be looking at the open source implementation by the R Project. References to R from here on in will refer to this open source
+implementation.&lt;/p&gt;
+&lt;p&gt;R is broken up into a core engine and a full complement of libraries and functions which provides all of its capabilities. Because
+of this, different downloads contain different pre-packaged functions. However, there is an entire repository of extra functionality
+available at CRAN (Comprehensive R Archive Network). There is a strong community of people willing to share the work they've done
+through CRAN. Because of this, there is usually a function, or several, to handle almost any task you can imagine. And if not, you
+have the freedom to develop your own. Because R is broken down into a core engine and functions, this means that any graphical
+interface is simply bolted on top of the core. There are several graphical interfaces available, such as RComander or Rgui.
+[gui1.png | R on a Mac] There are also graphical interfaces available for Windows and Mac OSX. We'll be looking at actual commands
+in R, so we'll be using the text interface. To start it, you simply have to type in "R" and hit enter. [text1.png] To quit R, you
+simply have to type "q();" and hit enter. In R, commands can end with either a semi-colon or a newline.&lt;/p&gt;
+&lt;p&gt;R has very extensive help files available for all of the commands and functions. Accessing these help pages can be done two ways:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;&amp;gt; help(command)&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 21)&lt;/p&gt;
+&lt;p&gt;Definition list ends without a blank line; unexpected unindent.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&amp;gt; ?command&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;These help pages are in the form of man pages. [text2.png] You can run a whole series of commands by using the source command&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; source("commands.R")&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;where the file "commands.R" contains all of the commands that you want to run as a single block. Think of this as if it were a shell
+script. You can send your output to a file with the sink command&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; sink("output.txt")&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Once you are done writing the output, you can reset the output back to the console with&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; sink()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;R can handle basic statistics out of the box. The available functions can do all of the single variable statistics that you are
+familiar doing. The first step is to load data. Data is stored in lists. These lists can be arranged as arrays and matrices. The
+easiest way to create data arrays is to use the concatenation function "c". This works well when you only have a little bit of data
+to work with.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; data1 = c(2,3,4,2,0,1,2)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This creates a single list, and dumps these values into the variable data1. Then you can use this variable in other functions. For
+example, if you wanted to find the average of these values, you would use&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; mean(data1)
+[1] 2&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The second line above is the output from the function "mean". Output is labeled with a numeric label "[1]". The output from the first
+command in a session has the label "[1]", the output from the second command is labeled "[2]", and so on. If you have a larger amount
+of data that you need to work with, you can use the read command to read in a file. If that data is in a table format, you can read
+that table in as a whole by using&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; DataToUse = read.table("research.data")&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You can access individual data elements by using the "[]" characters. So printing the second item is as simple as&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; data1[2]
+[1] 3&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you wanted to set a value in a vector, you can use&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; data1[2] = 5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So, let's say that you were making some measurements on whales. You would start by saving the data into a variable.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; whale = c(74,122,235,111,292,111,211,133,156,79)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The first thing you would want to do is to run some basic statistical functions to find the mean, variance and standard deviation&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; mean(whale)
+[1] 152.4
+&amp;gt; var(whale)
+[2] 5113.378
+&amp;gt;std(whale)
+Error: couldn't find function "std"&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It looks like there is no standard deviation function. But, since R is a full programming language, you can write your own.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; std = function(x) sqrt(var(x))
+&amp;gt; std(whale)
+[3] 71.50789&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This shows one of the shortcomings of R. Since it is such a large system, it does tend to have a relatively steep learning curve.
+More research would have shown that there is a builtin standard deviation function, it's just that it was called "sd" instead of "std"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; sd(whale)
+[4] 71.50789&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sometimes it's worth taking the extra time to do some research before storming forward and writing all of the code yourself.&lt;/p&gt;
+&lt;p&gt;R has very extensive graphing capabilities, as well. It generates very high quality plots and graphs that you can use in publications.
+The commands can be very simple, if you just want a quick display so that you can visually inspect your data. If you want very
+specific output, with lots of markup and customizations, then R gives you full control over all of the details of your graphs. The
+most basic plot command is simply plot. Let's say that you have a series of two dimensional data&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; x = c(1,2,3,4)
+&amp;gt; y = c(2,3,4,5)
+&amp;gt; plot(x,y)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This gives us the following plot. [gui2.png] This looks like a straight line, so you probably want to do a linear regression on it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; abline(lm(y~x))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This command does the linear regression of a straight line and plots it on the same plot. [gui3.png] This seems like a pretty close
+fit, so we should probably look at the coefficients of the linear model&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; lm(y~x)
+Call:
+lm(formula = y ~ x)&lt;/p&gt;
+&lt;p&gt;Coefficients:
+(Intercept)           x&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 114)&lt;/p&gt;
+&lt;p&gt;Unexpected indentation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1           1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So we end up with a straight line with a slope of 1 and an intercept of 1.&lt;/p&gt;
+&lt;p&gt;Once you've done all of your analysis, you'll probably want to generate some nice plots for your publication. By default, when you
+call one of the plotting functions, the output is the graphical display. But you can change this to an output file of a particular
+format. Let's say you want to generate some PNG's.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; png("filename.png")
+&amp;gt; plot(x,y)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This will save your plot to the file "filename.png". You can also save to several other file formats (jpeg, pdf, postscript, etc).
+There are also lots of other options available, so check out the help page.&lt;/p&gt;
+&lt;p&gt;This short crash course should give you an idea and starting point to exploring R. A good place to look for more information is the
+main page for the R project [&lt;a class="reference external" href="http://www.r-project.org"&gt;http://www.r-project.org&lt;/a&gt;]. Remember to check out the CRAN repository [&lt;a class="reference external" href="http://cran.r-project.org"&gt;http://cran.r-project.org&lt;/a&gt;] before
+you put too much work into it. Also, if there are any scientific packages or computational science technique covered, please let me know.&lt;/p&gt;&lt;/div&gt;</description><guid>https://joeybernard.github.io/posts/statistics-with-r/</guid><pubDate>Wed, 29 Jul 2020 23:32:14 GMT</pubDate></item><item><title>Github Satellite 2020</title><link>https://joeybernard.github.io/posts/github-satellite-2020/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;I have been listening in to the talks being given as part of Github Satellite 2020. They have all been really good. I have been a git user for years, and a lot of this has been on Github. But I really had no idea how much I had been missing. Part of this lack in my own knowledge was due to the fact that I have been working on either solo projects or projects of 2-3 people. Now that I am starting to work in larger groups, I am realizing the power of things like pull requests. This is probably old hat to people who have been working with Github in larger organizations, but it is eye opening to us solo workers. I will definitely be following up further with my new group so that we can actually use all of the tools available.&lt;/p&gt;
 &lt;p&gt;I also have not had time to look into the new official cli utility to work with Github. It looks awesome. I have work in several remote servers where cli tools is really the only sane way to work. It looks like it will make my work there a lot easier. It doesn't look like it is in the package repositories for most Linux Distributions yet, so you will need to grab it directly from the releases page (&lt;a class="reference external" href="https://github.com/cli/cli/releases"&gt;https://github.com/cli/cli/releases&lt;/a&gt;). I also need to use the command line in Windows, at least occasionally. When I do, I use scoop to manage my development environment. Luckily, you can add a new bucket and install the Github cli with the following commands&lt;/p&gt;
 &lt;pre class="literal-block"&gt;scoop bucket add github-gh https://github.com/cli/cli/scoop-gh.git
 scoop install gh&lt;/pre&gt;
