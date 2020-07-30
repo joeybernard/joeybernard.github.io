@@ -19,8 +19,15 @@ available at CRAN (Comprehensive R Archive Network). There is a strong community
 through CRAN. Because of this, there is usually a function, or several, to handle almost any task you can imagine. And if not, you 
 have the freedom to develop your own. Because R is broken down into a core engine and functions, this means that any graphical 
 interface is simply bolted on top of the core. There are several graphical interfaces available, such as RComander or Rgui. 
-[gui1.png | R on a Mac] There are also graphical interfaces available for Windows and Mac OSX. We'll be looking at actual commands 
-in R, so we'll be using the text interface. To start it, you simply have to type in "R" and hit enter. [text1.png] To quit R, you 
+
+  image::/images/R/gui1.png
+
+There are also graphical interfaces available for Windows and Mac OSX. We'll be looking at actual commands 
+in R, so we'll be using the text interface. To start it, you simply have to type in "R" and hit enter. 
+
+  image::/images/R/text1.png
+
+To quit R, you 
 simply have to type "q();" and hit enter. In R, commands can end with either a semi-colon or a newline.
 
 R has very extensive help files available for all of the commands and functions. Accessing these help pages can be done two ways:
@@ -29,7 +36,11 @@ R has very extensive help files available for all of the commands and functions.
       or
    > ?command
 
-These help pages are in the form of man pages. [text2.png] You can run a whole series of commands by using the source command
+These help pages are in the form of man pages. 
+
+  image::/images/R/text2.png
+
+You can run a whole series of commands by using the source command
 
    > source("commands.R")
 

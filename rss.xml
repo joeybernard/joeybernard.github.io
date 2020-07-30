@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Wed, 29 Jul 2020 23:47:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Statistics with R</title><link>https://joeybernard.github.io/posts/statistics-with-r/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;R is actually a full programming language, designed around the tasks you tend to need to do when you are doing statistics. It was
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Thu, 30 Jul 2020 00:04:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Statistics with R</title><link>https://joeybernard.github.io/posts/statistics-with-r/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;R is actually a full programming language, designed around the tasks you tend to need to do when you are doing statistics. It was
 developed at Bell Labs. It is very similar to another statistical programming language, S. Since R and S are programming languages,
 any actual programs are actually implementations of this language. There are commercial implementations available, like S-Plus.
 We'll be looking at the open source implementation by the R Project. References to R from here on in will refer to this open source
@@ -9,9 +9,16 @@ of this, different downloads contain different pre-packaged functions. However, 
 available at CRAN (Comprehensive R Archive Network). There is a strong community of people willing to share the work they've done
 through CRAN. Because of this, there is usually a function, or several, to handle almost any task you can imagine. And if not, you
 have the freedom to develop your own. Because R is broken down into a core engine and functions, this means that any graphical
-interface is simply bolted on top of the core. There are several graphical interfaces available, such as RComander or Rgui.
-[gui1.png | R on a Mac] There are also graphical interfaces available for Windows and Mac OSX. We'll be looking at actual commands
-in R, so we'll be using the text interface. To start it, you simply have to type in "R" and hit enter. [text1.png] To quit R, you
+interface is simply bolted on top of the core. There are several graphical interfaces available, such as RComander or Rgui.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;image::/images/R/gui1.png&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There are also graphical interfaces available for Windows and Mac OSX. We'll be looking at actual commands
+in R, so we'll be using the text interface. To start it, you simply have to type in "R" and hit enter.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;image::/images/R/text1.png&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To quit R, you
 simply have to type "q();" and hit enter. In R, commands can end with either a semi-colon or a newline.&lt;/p&gt;
 &lt;p&gt;R has very extensive help files available for all of the commands and functions. Accessing these help pages can be done two ways:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -21,12 +28,16 @@ simply have to type "q();" and hit enter. In R, commands can end with either a s
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 21)&lt;/p&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 28)&lt;/p&gt;
 &lt;p&gt;Definition list ends without a blank line; unexpected unindent.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&amp;gt; ?command&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;These help pages are in the form of man pages. [text2.png] You can run a whole series of commands by using the source command&lt;/p&gt;
+&lt;p&gt;These help pages are in the form of man pages.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;image::/images/R/text2.png&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You can run a whole series of commands by using the source command&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;gt; source("commands.R")&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -116,7 +127,7 @@ lm(formula = y ~ x)&lt;/p&gt;
 &lt;p&gt;Coefficients:
 (Intercept)           x&lt;/p&gt;
 &lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 114)&lt;/p&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 125)&lt;/p&gt;
 &lt;p&gt;Unexpected indentation.&lt;/p&gt;
 &lt;/div&gt;
 &lt;blockquote&gt;
