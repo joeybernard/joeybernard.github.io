@@ -146,14 +146,21 @@ most basic plot command is simply plot. Let's say that you have a series of two 
    > y = c(2,3,4,5)
    > plot(x,y)
 
-This gives us the following plot. [gui2.png] This looks like a straight line, so you probably want to do a linear regression on it.
+This gives us the following plot. 
+
+.. image:: /images/R/gui2.png
+
+This looks like a straight line, so you probably want to do a linear regression on it.
 
 .. sourcecode::
 
    > abline(lm(y~x))
 
-This command does the linear regression of a straight line and plots it on the same plot. [gui3.png] This seems like a pretty close 
-fit, so we should probably look at the coefficients of the linear model
+This command does the linear regression of a straight line and plots it on the same plot. 
+
+.. image:: /images/R/gui3.png
+
+This seems like a pretty close fit, so we should probably look at the coefficients of the linear model
 
 .. sourcecode::
 
