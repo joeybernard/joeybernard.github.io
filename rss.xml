@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Thu, 30 Jul 2020 00:16:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Statistics with R</title><link>https://joeybernard.github.io/posts/statistics-with-r/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;R is actually a full programming language, designed around the tasks you tend to need to do when you are doing statistics. It was
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Thu, 30 Jul 2020 00:26:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Statistics with R</title><link>https://joeybernard.github.io/posts/statistics-with-r/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;R is actually a full programming language, designed around the tasks you tend to need to do when you are doing statistics. It was
 developed at Bell Labs. It is very similar to another statistical programming language, S. Since R and S are programming languages,
 any actual programs are actually implementations of this language. There are commercial implementations available, like S-Plus.
 We'll be looking at the open source implementation by the R Project. References to R from here on in will refer to this open source
@@ -10,85 +10,85 @@ available at CRAN (Comprehensive R Archive Network). There is a strong community
 through CRAN. Because of this, there is usually a function, or several, to handle almost any task you can imagine. And if not, you
 have the freedom to develop your own. Because R is broken down into a core engine and functions, this means that any graphical
 interface is simply bolted on top of the core. There are several graphical interfaces available, such as RComander or Rgui.&lt;/p&gt;
-&lt;!-- image::/images/R/gui1.png --&gt;
+&lt;img alt="/images/R/gui1.png" src="https://joeybernard.github.io/images/R/gui1.png"&gt;
 &lt;p&gt;There are also graphical interfaces available for Windows and Mac OSX. We'll be looking at actual commands
 in R, so we'll be using the text interface. To start it, you simply have to type in "R" and hit enter.&lt;/p&gt;
-&lt;!-- image::/images/R/text1.png --&gt;
+&lt;img alt="/images/R/text1.png" src="https://joeybernard.github.io/images/R/text1.png"&gt;
 &lt;p&gt;To quit R, you
 simply have to type "q();" and hit enter. In R, commands can end with either a semi-colon or a newline.&lt;/p&gt;
 &lt;p&gt;R has very extensive help files available for all of the commands and functions. Accessing these help pages can be done two ways:&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_8b3832a33ffe4e4c8086bd9ab2c5b087-1"&gt;&lt;/a&gt;&amp;gt; help(command)
-&lt;a name="rest_code_8b3832a33ffe4e4c8086bd9ab2c5b087-2"&gt;&lt;/a&gt;or
-&lt;a name="rest_code_8b3832a33ffe4e4c8086bd9ab2c5b087-3"&gt;&lt;/a&gt;&amp;gt; ?command
+&lt;pre class="code text"&gt;&lt;a name="rest_code_90c863d68bb248ac87ce65d7eaf14567-1"&gt;&lt;/a&gt;&amp;gt; help(command)
+&lt;a name="rest_code_90c863d68bb248ac87ce65d7eaf14567-2"&gt;&lt;/a&gt;or
+&lt;a name="rest_code_90c863d68bb248ac87ce65d7eaf14567-3"&gt;&lt;/a&gt;&amp;gt; ?command
 &lt;/pre&gt;&lt;p&gt;These help pages are in the form of man pages.&lt;/p&gt;
-&lt;!-- image::/images/R/text2.png --&gt;
+&lt;img alt="/images/R/text2.png" src="https://joeybernard.github.io/images/R/text2.png"&gt;
 &lt;p&gt;You can run a whole series of commands by using the source command&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_7a118c438acb45e0a1f00a9349a369a8-1"&gt;&lt;/a&gt;&amp;gt; source("commands.R")
+&lt;pre class="code text"&gt;&lt;a name="rest_code_26c144319ce24470b7f4289810c7a91f-1"&gt;&lt;/a&gt;&amp;gt; source("commands.R")
 &lt;/pre&gt;&lt;p&gt;where the file "commands.R" contains all of the commands that you want to run as a single block. Think of this as if it were a shell
 script. You can send your output to a file with the sink command&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_3e6a90c727c34a98a94fa80f63e02c0e-1"&gt;&lt;/a&gt;&amp;gt; sink("output.txt")
+&lt;pre class="code text"&gt;&lt;a name="rest_code_92d12727de714d43bb42ac5134e0de33-1"&gt;&lt;/a&gt;&amp;gt; sink("output.txt")
 &lt;/pre&gt;&lt;p&gt;Once you are done writing the output, you can reset the output back to the console with&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_6edad36c04ab45b5ae62722e2b1d1663-1"&gt;&lt;/a&gt;&amp;gt; sink()
+&lt;pre class="code text"&gt;&lt;a name="rest_code_cbb1eb918d8741779c03a2f83e3c00a1-1"&gt;&lt;/a&gt;&amp;gt; sink()
 &lt;/pre&gt;&lt;p&gt;R can handle basic statistics out of the box. The available functions can do all of the single variable statistics that you are
 familiar doing. The first step is to load data. Data is stored in lists. These lists can be arranged as arrays and matrices. The
 easiest way to create data arrays is to use the concatenation function "c". This works well when you only have a little bit of data
 to work with.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_447aea866183420787ca1279a8653427-1"&gt;&lt;/a&gt;&amp;gt; data1 = c(2,3,4,2,0,1,2)
+&lt;pre class="code text"&gt;&lt;a name="rest_code_c7cc86f73de9480c81120a882cb05549-1"&gt;&lt;/a&gt;&amp;gt; data1 = c(2,3,4,2,0,1,2)
 &lt;/pre&gt;&lt;p&gt;This creates a single list, and dumps these values into the variable data1. Then you can use this variable in other functions. For
 example, if you wanted to find the average of these values, you would use&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_b1f07556e57c4f5985f91283500af682-1"&gt;&lt;/a&gt;&amp;gt; mean(data1)
-&lt;a name="rest_code_b1f07556e57c4f5985f91283500af682-2"&gt;&lt;/a&gt;[1] 2
+&lt;pre class="code text"&gt;&lt;a name="rest_code_e4100ed4df7949d0846c7127e9d8ed33-1"&gt;&lt;/a&gt;&amp;gt; mean(data1)
+&lt;a name="rest_code_e4100ed4df7949d0846c7127e9d8ed33-2"&gt;&lt;/a&gt;[1] 2
 &lt;/pre&gt;&lt;p&gt;The second line above is the output from the function "mean". Output is labeled with a numeric label "[1]". The output from the first
 command in a session has the label "[1]", the output from the second command is labeled "[2]", and so on. If you have a larger amount
 of data that you need to work with, you can use the read command to read in a file. If that data is in a table format, you can read
 that table in as a whole by using&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_3707bf64e67446e9843bb7ceb2a41ba4-1"&gt;&lt;/a&gt;&amp;gt; DataToUse = read.table("research.data")
+&lt;pre class="code text"&gt;&lt;a name="rest_code_da544c065d5c4516bf58a836308656bd-1"&gt;&lt;/a&gt;&amp;gt; DataToUse = read.table("research.data")
 &lt;/pre&gt;&lt;p&gt;You can access individual data elements by using the "[]" characters. So printing the second item is as simple as&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_99d304e7a91b4338957b4fd0dfcf8c66-1"&gt;&lt;/a&gt;&amp;gt; data1[2]
-&lt;a name="rest_code_99d304e7a91b4338957b4fd0dfcf8c66-2"&gt;&lt;/a&gt;[1] 3
+&lt;pre class="code text"&gt;&lt;a name="rest_code_a84a1fbcae78438eb5cb890196a9d8f0-1"&gt;&lt;/a&gt;&amp;gt; data1[2]
+&lt;a name="rest_code_a84a1fbcae78438eb5cb890196a9d8f0-2"&gt;&lt;/a&gt;[1] 3
 &lt;/pre&gt;&lt;p&gt;If you wanted to set a value in a vector, you can use&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_8b1398b2d6b544b497794c76bd1d72ff-1"&gt;&lt;/a&gt;&amp;gt; data1[2] = 5
+&lt;pre class="code text"&gt;&lt;a name="rest_code_2a9ba1e96a354cdeb93cfb62981c0904-1"&gt;&lt;/a&gt;&amp;gt; data1[2] = 5
 &lt;/pre&gt;&lt;p&gt;So, let's say that you were making some measurements on whales. You would start by saving the data into a variable.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_0343e577a98d4944bd9e06a8bdaad3b2-1"&gt;&lt;/a&gt;&amp;gt; whale = c(74,122,235,111,292,111,211,133,156,79)
+&lt;pre class="code text"&gt;&lt;a name="rest_code_f1d368e512cc46609de4e309329688fb-1"&gt;&lt;/a&gt;&amp;gt; whale = c(74,122,235,111,292,111,211,133,156,79)
 &lt;/pre&gt;&lt;p&gt;The first thing you would want to do is to run some basic statistical functions to find the mean, variance and standard deviation&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_3640cd8083994015897721f343b96e05-1"&gt;&lt;/a&gt;&amp;gt; mean(whale)
-&lt;a name="rest_code_3640cd8083994015897721f343b96e05-2"&gt;&lt;/a&gt;[1] 152.4
-&lt;a name="rest_code_3640cd8083994015897721f343b96e05-3"&gt;&lt;/a&gt;&amp;gt; var(whale)
-&lt;a name="rest_code_3640cd8083994015897721f343b96e05-4"&gt;&lt;/a&gt;[2] 5113.378
-&lt;a name="rest_code_3640cd8083994015897721f343b96e05-5"&gt;&lt;/a&gt;&amp;gt;std(whale)
-&lt;a name="rest_code_3640cd8083994015897721f343b96e05-6"&gt;&lt;/a&gt;Error: couldn't find function "std"
+&lt;pre class="code text"&gt;&lt;a name="rest_code_2e89cfac73f3411080fcd1fad369c9e2-1"&gt;&lt;/a&gt;&amp;gt; mean(whale)
+&lt;a name="rest_code_2e89cfac73f3411080fcd1fad369c9e2-2"&gt;&lt;/a&gt;[1] 152.4
+&lt;a name="rest_code_2e89cfac73f3411080fcd1fad369c9e2-3"&gt;&lt;/a&gt;&amp;gt; var(whale)
+&lt;a name="rest_code_2e89cfac73f3411080fcd1fad369c9e2-4"&gt;&lt;/a&gt;[2] 5113.378
+&lt;a name="rest_code_2e89cfac73f3411080fcd1fad369c9e2-5"&gt;&lt;/a&gt;&amp;gt;std(whale)
+&lt;a name="rest_code_2e89cfac73f3411080fcd1fad369c9e2-6"&gt;&lt;/a&gt;Error: couldn't find function "std"
 &lt;/pre&gt;&lt;p&gt;It looks like there is no standard deviation function. But, since R is a full programming language, you can write your own.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_21b42f03ddd54f93ab4f9327032fea86-1"&gt;&lt;/a&gt;&amp;gt; std = function(x) sqrt(var(x))
-&lt;a name="rest_code_21b42f03ddd54f93ab4f9327032fea86-2"&gt;&lt;/a&gt;&amp;gt; std(whale)
-&lt;a name="rest_code_21b42f03ddd54f93ab4f9327032fea86-3"&gt;&lt;/a&gt;[3] 71.50789
+&lt;pre class="code text"&gt;&lt;a name="rest_code_550d122c968f446dad1f020b24a38844-1"&gt;&lt;/a&gt;&amp;gt; std = function(x) sqrt(var(x))
+&lt;a name="rest_code_550d122c968f446dad1f020b24a38844-2"&gt;&lt;/a&gt;&amp;gt; std(whale)
+&lt;a name="rest_code_550d122c968f446dad1f020b24a38844-3"&gt;&lt;/a&gt;[3] 71.50789
 &lt;/pre&gt;&lt;p&gt;This shows one of the shortcomings of R. Since it is such a large system, it does tend to have a relatively steep learning curve.
 More research would have shown that there is a builtin standard deviation function, it's just that it was called "sd" instead of "std"&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_0498cf944af044009598ab581be0d501-1"&gt;&lt;/a&gt;&amp;gt; sd(whale)
-&lt;a name="rest_code_0498cf944af044009598ab581be0d501-2"&gt;&lt;/a&gt;[4] 71.50789
+&lt;pre class="code text"&gt;&lt;a name="rest_code_675901cf89354a298ac5bcc3629207a8-1"&gt;&lt;/a&gt;&amp;gt; sd(whale)
+&lt;a name="rest_code_675901cf89354a298ac5bcc3629207a8-2"&gt;&lt;/a&gt;[4] 71.50789
 &lt;/pre&gt;&lt;p&gt;Sometimes it's worth taking the extra time to do some research before storming forward and writing all of the code yourself.&lt;/p&gt;
 &lt;p&gt;R has very extensive graphing capabilities, as well. It generates very high quality plots and graphs that you can use in publications.
 The commands can be very simple, if you just want a quick display so that you can visually inspect your data. If you want very
 specific output, with lots of markup and customizations, then R gives you full control over all of the details of your graphs. The
 most basic plot command is simply plot. Let's say that you have a series of two dimensional data&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_1b450f2667524ed4a81eaa6fb8e879dc-1"&gt;&lt;/a&gt;&amp;gt; x = c(1,2,3,4)
-&lt;a name="rest_code_1b450f2667524ed4a81eaa6fb8e879dc-2"&gt;&lt;/a&gt;&amp;gt; y = c(2,3,4,5)
-&lt;a name="rest_code_1b450f2667524ed4a81eaa6fb8e879dc-3"&gt;&lt;/a&gt;&amp;gt; plot(x,y)
+&lt;pre class="code text"&gt;&lt;a name="rest_code_d35765ca138148f8949a1ad163a569b6-1"&gt;&lt;/a&gt;&amp;gt; x = c(1,2,3,4)
+&lt;a name="rest_code_d35765ca138148f8949a1ad163a569b6-2"&gt;&lt;/a&gt;&amp;gt; y = c(2,3,4,5)
+&lt;a name="rest_code_d35765ca138148f8949a1ad163a569b6-3"&gt;&lt;/a&gt;&amp;gt; plot(x,y)
 &lt;/pre&gt;&lt;p&gt;This gives us the following plot. [gui2.png] This looks like a straight line, so you probably want to do a linear regression on it.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_a234d3774c5844259c39dac06da34fdd-1"&gt;&lt;/a&gt;&amp;gt; abline(lm(y~x))
+&lt;pre class="code text"&gt;&lt;a name="rest_code_9804c91ed26c4848bce29dba087e2593-1"&gt;&lt;/a&gt;&amp;gt; abline(lm(y~x))
 &lt;/pre&gt;&lt;p&gt;This command does the linear regression of a straight line and plots it on the same plot. [gui3.png] This seems like a pretty close
 fit, so we should probably look at the coefficients of the linear model&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_5ee67ee02c764976ac46492641c5746e-1"&gt;&lt;/a&gt;&amp;gt; lm(y~x)
-&lt;a name="rest_code_5ee67ee02c764976ac46492641c5746e-2"&gt;&lt;/a&gt;Call:
-&lt;a name="rest_code_5ee67ee02c764976ac46492641c5746e-3"&gt;&lt;/a&gt;lm(formula = y ~ x)
-&lt;a name="rest_code_5ee67ee02c764976ac46492641c5746e-4"&gt;&lt;/a&gt;Coefficients:
-&lt;a name="rest_code_5ee67ee02c764976ac46492641c5746e-5"&gt;&lt;/a&gt;(Intercept)           x
-&lt;a name="rest_code_5ee67ee02c764976ac46492641c5746e-6"&gt;&lt;/a&gt;          1           1
+&lt;pre class="code text"&gt;&lt;a name="rest_code_29a3565e54184be5b85c65960bb63d4d-1"&gt;&lt;/a&gt;&amp;gt; lm(y~x)
+&lt;a name="rest_code_29a3565e54184be5b85c65960bb63d4d-2"&gt;&lt;/a&gt;Call:
+&lt;a name="rest_code_29a3565e54184be5b85c65960bb63d4d-3"&gt;&lt;/a&gt;lm(formula = y ~ x)
+&lt;a name="rest_code_29a3565e54184be5b85c65960bb63d4d-4"&gt;&lt;/a&gt;Coefficients:
+&lt;a name="rest_code_29a3565e54184be5b85c65960bb63d4d-5"&gt;&lt;/a&gt;(Intercept)           x
+&lt;a name="rest_code_29a3565e54184be5b85c65960bb63d4d-6"&gt;&lt;/a&gt;          1           1
 &lt;/pre&gt;&lt;p&gt;So we end up with a straight line with a slope of 1 and an intercept of 1.&lt;/p&gt;
 &lt;p&gt;Once you've done all of your analysis, you'll probably want to generate some nice plots for your publication. By default, when you
 call one of the plotting functions, the output is the graphical display. But you can change this to an output file of a particular
 format. Let's say you want to generate some PNG's.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_dd3dea5120d043ccb48edb136ae8bad4-1"&gt;&lt;/a&gt;&amp;gt; png("filename.png")
-&lt;a name="rest_code_dd3dea5120d043ccb48edb136ae8bad4-2"&gt;&lt;/a&gt;&amp;gt; plot(x,y)
+&lt;pre class="code text"&gt;&lt;a name="rest_code_c7445b5d56cb4945b8cbf024325d3006-1"&gt;&lt;/a&gt;&amp;gt; png("filename.png")
+&lt;a name="rest_code_c7445b5d56cb4945b8cbf024325d3006-2"&gt;&lt;/a&gt;&amp;gt; plot(x,y)
 &lt;/pre&gt;&lt;p&gt;This will save your plot to the file "filename.png". You can also save to several other file formats (jpeg, pdf, postscript, etc).
 There are also lots of other options available, so check out the help page.&lt;/p&gt;
 &lt;p&gt;This short crash course should give you an idea and starting point to exploring R. A good place to look for more information is the

@@ -20,12 +20,12 @@ through CRAN. Because of this, there is usually a function, or several, to handl
 have the freedom to develop your own. Because R is broken down into a core engine and functions, this means that any graphical 
 interface is simply bolted on top of the core. There are several graphical interfaces available, such as RComander or Rgui. 
 
-.. image::/images/R/gui1.png
+.. image:: /images/R/gui1.png
 
 There are also graphical interfaces available for Windows and Mac OSX. We'll be looking at actual commands 
 in R, so we'll be using the text interface. To start it, you simply have to type in "R" and hit enter. 
 
-.. image::/images/R/text1.png
+.. image:: /images/R/text1.png
 
 To quit R, you 
 simply have to type "q();" and hit enter. In R, commands can end with either a semi-colon or a newline.
@@ -40,7 +40,7 @@ R has very extensive help files available for all of the commands and functions.
 
 These help pages are in the form of man pages. 
 
-.. image::/images/R/text2.png
+.. image:: /images/R/text2.png
 
 You can run a whole series of commands by using the source command
 
