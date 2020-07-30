@@ -33,7 +33,7 @@ simply have to type "q();" and hit enter. In R, commands can end with either a s
 R has very extensive help files available for all of the commands and functions. Accessing these help pages can be done two ways:
 
    > help(command)
-      or
+   or
    > ?command
 
 These help pages are in the form of man pages. 
@@ -128,7 +128,6 @@ fit, so we should probably look at the coefficients of the linear model
    > lm(y~x)
    Call:
    lm(formula = y ~ x)
-
    Coefficients:
    (Intercept)           x
              1           1
