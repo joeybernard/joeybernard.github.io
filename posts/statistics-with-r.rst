@@ -20,12 +20,12 @@ through CRAN. Because of this, there is usually a function, or several, to handl
 have the freedom to develop your own. Because R is broken down into a core engine and functions, this means that any graphical 
 interface is simply bolted on top of the core. There are several graphical interfaces available, such as RComander or Rgui. 
 
-.. image::/images/R/gui1.png
+.. image:: /images/R/gui1.png
 
 There are also graphical interfaces available for Windows and Mac OSX. We'll be looking at actual commands 
 in R, so we'll be using the text interface. To start it, you simply have to type in "R" and hit enter. 
 
-.. image::/images/R/text1.png
+.. image:: /images/R/text1.png
 
 To quit R, you 
 simply have to type "q();" and hit enter. In R, commands can end with either a semi-colon or a newline.
@@ -40,7 +40,7 @@ R has very extensive help files available for all of the commands and functions.
 
 These help pages are in the form of man pages. 
 
-.. image::/images/R/text2.png
+.. image:: /images/R/text2.png
 
 You can run a whole series of commands by using the source command
 
@@ -146,14 +146,21 @@ most basic plot command is simply plot. Let's say that you have a series of two 
    > y = c(2,3,4,5)
    > plot(x,y)
 
-This gives us the following plot. [gui2.png] This looks like a straight line, so you probably want to do a linear regression on it.
+This gives us the following plot. 
+
+.. image:: /images/R/gui2.png
+
+This looks like a straight line, so you probably want to do a linear regression on it.
 
 .. sourcecode::
 
    > abline(lm(y~x))
 
-This command does the linear regression of a straight line and plots it on the same plot. [gui3.png] This seems like a pretty close 
-fit, so we should probably look at the coefficients of the linear model
+This command does the linear regression of a straight line and plots it on the same plot. 
+
+.. image:: /images/R/gui3.png
+
+This seems like a pretty close fit, so we should probably look at the coefficients of the linear model
 
 .. sourcecode::
 
