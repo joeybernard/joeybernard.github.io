@@ -139,8 +139,9 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/index.html", "Home"),
         ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
+        ("/categories/index.html", "Tags"),
         ("/rss.xml", "RSS feed"),
     ),
 }
@@ -157,7 +158,7 @@ THEME = "bootblog"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.
-THEME_COLOR = '#7DFDFE'
+#THEME_COLOR = '#7DFDFE'
 
 # Theme configuration. Fully theme-dependent. (translatable)
 # Examples below are for bootblog4.
@@ -1361,8 +1362,25 @@ WARN_ABOUT_TAG_METADATA = False
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
-GLOBAL_CONTEXT['HACK_VARIANT'] = 'dark'
+GLOBAL_CONTEXT = {'blog_sidebar': """\
+<div class="sidebar-module sidebar-module-inset">
+  <h4>About</h4>
+  <p>My background is degrees in both physics and computer science. Along with that, I have an interest in 
+     the human fascination in mysticism. This blog will end up being a mix of everything, just like what
+     rattles around in my head :-)</p>
+</div>
+<div class="sidebar-module">
+  <h4>Links</h4>
+  <ol class="list-unstyled">
+    <li><a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog Theme</a></li>
+    <li><a href="https://getnikola.com/">Nikola</a></li>
+    <li><a href="https://twitter.com/mdo">@mdo</a></li>
+    <li><a href="https://twitter.com/Kwpolska">@Kwpolska</a></li>
+    <li><a href="https://twitter.com/GetNikola">@GetNikola</a></li>
+  </ol>
+</div>
+"""}
+#GLOBAL_CONTEXT['HACK_VARIANT'] = 'dark'
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be
 # rendered
