@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html prefix="" lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Using git for your config | Rational Druid</title>
-<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/dark.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-<meta name="theme-color" content="#7DFDFE">
-<meta name="generator" content="Nikola (getnikola.com)">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="https://joeybernard.github.io/posts/using-git-for-your-config/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><script data-ad-client="ca-pub-8127726707137346" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="author" content="Joey Bernard">
@@ -25,40 +19,57 @@ important whenever I setup a new Linux system. Some time ago, I moved all of my 
 <meta property="article:published_time" content="2020-03-19T23:14:38-03:00">
 <meta property="article:tag" content="git admin">
 </head>
-<body class="hack dark">
-
+<body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-    <div id="container">
-         
-    <header id="header"><h1 id="brand"><a href="../../" title="Rational Druid" rel="home">
 
-        <span id="blog-title">Rational Druid</span>
-    </a></h1>
+<!-- Menubar -->
 
-        
+<div class="blog-masthead">
+    <div class="container">
+<!-- This keeps the margins nice -->
+        <nav class="blog-nav" role="navigation"><a href="../../index.html" class="blog-nav-item">Home</a>
+            <a href="../../archive.html" class="blog-nav-item">Archive</a>
+            <a href="../../categories/index.html" class="blog-nav-item">Tags</a>
+            <a href="../../rss.xml" class="blog-nav-item">RSS feed</a>
 
-        
-    <nav id="menu"><ul>
-<li><a href="../../archive.html">Archive</a></li>
-                <li><a href="../../categories/">Tags</a></li>
-                <li><a href="../../rss.xml">RSS feed</a></li>
-
-    
-
-    
-    
-    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Using git for your config</a></h1>
-
-        <div class="metadata">
-            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    Joey Bernard
-            </span></p>
-            <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-03-19T23:14:38-03:00" itemprop="datePublished" title="2020-03-19 23:14">2020-03-19 23:14</time></a>
-            </p>
             
-        <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
+
+                
+                
+                    
+    <a href="index.rst" class="blog-nav-item blog-nav-item-aside" id="sourcelink">Source</a>
+
+                
+            
+        </nav>
+</div>
+<!-- /.container -->
+</div>
+<!-- End of Menubar -->
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <div class="blog-header">
+            <h1 class="blog-title">
+                <a href="https://joeybernard.github.io/">
+
+                    <span id="blog-title">Rational Druid</span>
+                </a>
+            </h1>
+            <p class="lead blog-description">This a site on science, nature and coding.</p>
+            
+        </div>
+        <!--Body content-->
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h2 class="p-name entry-title blog-post-title" itemprop="headline name"><a href="." class="u-url">Using git for your config</a></h2>
+
+        <div class="metadata blog-post-meta">
+            <p class="byline author vcard"><span class="byline-name fn">Joey Bernard</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2020-03-19T23:14:38-03:00" itemprop="datePublished" title="2020-03-19 23:14">2020-03-19 23:14</time></a></p>
+            
+        <p class="sourceline"><a href="index.rst" id="sourcelink">Source</a></p>
 
         </div>
         
@@ -89,14 +100,36 @@ your life easier. Hopefully you find it useful.</p>
             <li class="next">
                 <a href="../github-satellite-2020/" rel="next" title="Github Satellite 2020">Next post</a>
             </li>
-        </ul></nav></aside></article></main><footer id="footer"><p>Contents © 2020         <a href="mailto:druid.bernard@gmail.com">Joey Bernard</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
-            
-        </footer>
+        </ul></nav></aside></article>
 </div>
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                <div class="sidebar-module sidebar-module-inset">
+  <h4>About</h4>
+  <p>This is the Bootstrap Blog theme by @mdo, adapted for Nikola by @Kwpolska.
+  And this sidebar is completely customizable — you can put anything you want
+  here!</p>
+</div>
+<div class="sidebar-module">
+  <h4>Links</h4>
+  <ol class="list-unstyled">
+<li><a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog Theme</a></li>
+    <li><a href="https://getnikola.com/">Nikola</a></li>
+    <li><a href="https://twitter.com/mdo">@mdo</a></li>
+    <li><a href="https://twitter.com/Kwpolska">@Kwpolska</a></li>
+    <li><a href="https://twitter.com/GetNikola">@GetNikola</a></li>
+  </ol>
+</div>
+
+            </div>
+        <!--End of body content-->
+        </div>
+    </div>
+</div>
+
+<footer class="blog-footer" id="footer">
+    Contents © 2020         <a href="mailto:druid.bernard@gmail.com">Joey Bernard</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
     
-    
-<!-- Social buttons -->
-<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+</footer><script src="../../assets/js/all-nocdn.js"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
 <ul>
 <li>
@@ -110,7 +143,16 @@ your life easier. Hopefully you find it useful.</p>
 </li>
 </ul>
 </div>
-<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><!-- Global Site Tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-146153844-1"></script><script>
+<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global Site Tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-146153844-1"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

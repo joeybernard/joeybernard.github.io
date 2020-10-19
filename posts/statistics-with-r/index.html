@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html prefix="" lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Statistics with R | Rational Druid</title>
-<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/dark.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-<meta name="theme-color" content="#7DFDFE">
-<meta name="generator" content="Nikola (getnikola.com)">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="https://joeybernard.github.io/posts/statistics-with-r/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><script data-ad-client="ca-pub-8127726707137346" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="author" content="Joey Bernard">
@@ -24,40 +18,57 @@ developed at Bell Labs. It is very similar to another statistical prog">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-07-29T20:32:14-03:00">
 </head>
-<body class="hack dark">
-
+<body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-    <div id="container">
-         
-    <header id="header"><h1 id="brand"><a href="../../" title="Rational Druid" rel="home">
 
-        <span id="blog-title">Rational Druid</span>
-    </a></h1>
+<!-- Menubar -->
 
-        
+<div class="blog-masthead">
+    <div class="container">
+<!-- This keeps the margins nice -->
+        <nav class="blog-nav" role="navigation"><a href="../../index.html" class="blog-nav-item">Home</a>
+            <a href="../../archive.html" class="blog-nav-item">Archive</a>
+            <a href="../../categories/index.html" class="blog-nav-item">Tags</a>
+            <a href="../../rss.xml" class="blog-nav-item">RSS feed</a>
 
-        
-    <nav id="menu"><ul>
-<li><a href="../../archive.html">Archive</a></li>
-                <li><a href="../../categories/">Tags</a></li>
-                <li><a href="../../rss.xml">RSS feed</a></li>
-
-    
-
-    
-    
-    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Statistics with R</a></h1>
-
-        <div class="metadata">
-            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    Joey Bernard
-            </span></p>
-            <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-29T20:32:14-03:00" itemprop="datePublished" title="2020-07-29 20:32">2020-07-29 20:32</time></a>
-            </p>
             
-        <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
+
+                
+                
+                    
+    <a href="index.rst" class="blog-nav-item blog-nav-item-aside" id="sourcelink">Source</a>
+
+                
+            
+        </nav>
+</div>
+<!-- /.container -->
+</div>
+<!-- End of Menubar -->
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <div class="blog-header">
+            <h1 class="blog-title">
+                <a href="https://joeybernard.github.io/">
+
+                    <span id="blog-title">Rational Druid</span>
+                </a>
+            </h1>
+            <p class="lead blog-description">This a site on science, nature and coding.</p>
+            
+        </div>
+        <!--Body content-->
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h2 class="p-name entry-title blog-post-title" itemprop="headline name"><a href="." class="u-url">Statistics with R</a></h2>
+
+        <div class="metadata blog-post-meta">
+            <p class="byline author vcard"><span class="byline-name fn">Joey Bernard</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2020-07-29T20:32:14-03:00" itemprop="datePublished" title="2020-07-29 20:32">2020-07-29 20:32</time></a></p>
+            
+        <p class="sourceline"><a href="index.rst" id="sourcelink">Source</a></p>
 
         </div>
         
@@ -80,94 +91,94 @@ in R, so we'll be using the text interface. To start it, you simply have to type
 <img alt="/images/R/text1.png" src="../../images/R/text1.png"><p>To quit R, you
 simply have to type "q();" and hit enter. In R, commands can end with either a semi-colon or a newline.</p>
 <p>R has very extensive help files available for all of the commands and functions. Accessing these help pages can be done two ways:</p>
-<pre class="code text"><a name="rest_code_57ff307a87e1477b881dc52c8536f188-1"></a>&gt; help(command)
-<a name="rest_code_57ff307a87e1477b881dc52c8536f188-2"></a>or
-<a name="rest_code_57ff307a87e1477b881dc52c8536f188-3"></a>&gt; ?command
+<pre class="code text"><a name="rest_code_297a6ebd47614ae3a9b8836c51341fb0-1"></a>&gt; help(command)
+<a name="rest_code_297a6ebd47614ae3a9b8836c51341fb0-2"></a>or
+<a name="rest_code_297a6ebd47614ae3a9b8836c51341fb0-3"></a>&gt; ?command
 </pre>
 <p>These help pages are in the form of man pages.</p>
 <img alt="/images/R/text2.png" src="../../images/R/text2.png"><p>You can run a whole series of commands by using the source command</p>
-<pre class="code text"><a name="rest_code_42c936d7306e426d8b3f93f55d4ad860-1"></a>&gt; source("commands.R")
+<pre class="code text"><a name="rest_code_280b13d2b7404fe997d4ef7e22e43be6-1"></a>&gt; source("commands.R")
 </pre>
 <p>where the file "commands.R" contains all of the commands that you want to run as a single block. Think of this as if it were a shell
 script. You can send your output to a file with the sink command</p>
-<pre class="code text"><a name="rest_code_a760513af888403d942b74fc3a5f50e3-1"></a>&gt; sink("output.txt")
+<pre class="code text"><a name="rest_code_60d5e6a02cc849b0ad73a8b3767d0bf8-1"></a>&gt; sink("output.txt")
 </pre>
 <p>Once you are done writing the output, you can reset the output back to the console with</p>
-<pre class="code text"><a name="rest_code_b4f9d15cc815430db0c8164cef15be98-1"></a>&gt; sink()
+<pre class="code text"><a name="rest_code_fbd84ef102084af59f8edebe4abdf6fa-1"></a>&gt; sink()
 </pre>
 <p>R can handle basic statistics out of the box. The available functions can do all of the single variable statistics that you are
 familiar doing. The first step is to load data. Data is stored in lists. These lists can be arranged as arrays and matrices. The
 easiest way to create data arrays is to use the concatenation function "c". This works well when you only have a little bit of data
 to work with.</p>
-<pre class="code text"><a name="rest_code_ae605579f4734b03bf2733b3e5fa9f79-1"></a>&gt; data1 = c(2,3,4,2,0,1,2)
+<pre class="code text"><a name="rest_code_d58ef6dc5c1942d1a54fcd2344602502-1"></a>&gt; data1 = c(2,3,4,2,0,1,2)
 </pre>
 <p>This creates a single list, and dumps these values into the variable data1. Then you can use this variable in other functions. For
 example, if you wanted to find the average of these values, you would use</p>
-<pre class="code text"><a name="rest_code_0966a196556d4fd88a8bf4cdac4b2d7c-1"></a>&gt; mean(data1)
-<a name="rest_code_0966a196556d4fd88a8bf4cdac4b2d7c-2"></a>[1] 2
+<pre class="code text"><a name="rest_code_abf009c9958d445989ed16db458abce2-1"></a>&gt; mean(data1)
+<a name="rest_code_abf009c9958d445989ed16db458abce2-2"></a>[1] 2
 </pre>
 <p>The second line above is the output from the function "mean". Output is labeled with a numeric label "[1]". The output from the first
 command in a session has the label "[1]", the output from the second command is labeled "[2]", and so on. If you have a larger amount
 of data that you need to work with, you can use the read command to read in a file. If that data is in a table format, you can read
 that table in as a whole by using</p>
-<pre class="code text"><a name="rest_code_305c9c7215464baca0c00d90840dd59d-1"></a>&gt; DataToUse = read.table("research.data")
+<pre class="code text"><a name="rest_code_a05dae6f57c64810b3900df11c9af5d8-1"></a>&gt; DataToUse = read.table("research.data")
 </pre>
 <p>You can access individual data elements by using the "[]" characters. So printing the second item is as simple as</p>
-<pre class="code text"><a name="rest_code_e605f9d516fd4bb4906b3c8d1cb8e7f2-1"></a>&gt; data1[2]
-<a name="rest_code_e605f9d516fd4bb4906b3c8d1cb8e7f2-2"></a>[1] 3
+<pre class="code text"><a name="rest_code_d2a3545789374370a7141eb71ad66960-1"></a>&gt; data1[2]
+<a name="rest_code_d2a3545789374370a7141eb71ad66960-2"></a>[1] 3
 </pre>
 <p>If you wanted to set a value in a vector, you can use</p>
-<pre class="code text"><a name="rest_code_fcf04423040d4cc5ac7be2bc29ddb83c-1"></a>&gt; data1[2] = 5
+<pre class="code text"><a name="rest_code_342ebad48d9548da875202687b8faa48-1"></a>&gt; data1[2] = 5
 </pre>
 <p>So, let's say that you were making some measurements on whales. You would start by saving the data into a variable.</p>
-<pre class="code text"><a name="rest_code_424b230753214980a4b1dcddbb5bb052-1"></a>&gt; whale = c(74,122,235,111,292,111,211,133,156,79)
+<pre class="code text"><a name="rest_code_b5ba096667ad482e9b284a4e36065c61-1"></a>&gt; whale = c(74,122,235,111,292,111,211,133,156,79)
 </pre>
 <p>The first thing you would want to do is to run some basic statistical functions to find the mean, variance and standard deviation</p>
-<pre class="code text"><a name="rest_code_4f16cfe3b17343d79b5b569e816fb91d-1"></a>&gt; mean(whale)
-<a name="rest_code_4f16cfe3b17343d79b5b569e816fb91d-2"></a>[1] 152.4
-<a name="rest_code_4f16cfe3b17343d79b5b569e816fb91d-3"></a>&gt; var(whale)
-<a name="rest_code_4f16cfe3b17343d79b5b569e816fb91d-4"></a>[2] 5113.378
-<a name="rest_code_4f16cfe3b17343d79b5b569e816fb91d-5"></a>&gt;std(whale)
-<a name="rest_code_4f16cfe3b17343d79b5b569e816fb91d-6"></a>Error: couldn't find function "std"
+<pre class="code text"><a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-1"></a>&gt; mean(whale)
+<a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-2"></a>[1] 152.4
+<a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-3"></a>&gt; var(whale)
+<a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-4"></a>[2] 5113.378
+<a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-5"></a>&gt;std(whale)
+<a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-6"></a>Error: couldn't find function "std"
 </pre>
 <p>It looks like there is no standard deviation function. But, since R is a full programming language, you can write your own.</p>
-<pre class="code text"><a name="rest_code_fc26f1217e564e18be7ae200ae617ff7-1"></a>&gt; std = function(x) sqrt(var(x))
-<a name="rest_code_fc26f1217e564e18be7ae200ae617ff7-2"></a>&gt; std(whale)
-<a name="rest_code_fc26f1217e564e18be7ae200ae617ff7-3"></a>[3] 71.50789
+<pre class="code text"><a name="rest_code_7161da8548b14ed39a411132c76ff28e-1"></a>&gt; std = function(x) sqrt(var(x))
+<a name="rest_code_7161da8548b14ed39a411132c76ff28e-2"></a>&gt; std(whale)
+<a name="rest_code_7161da8548b14ed39a411132c76ff28e-3"></a>[3] 71.50789
 </pre>
 <p>This shows one of the shortcomings of R. Since it is such a large system, it does tend to have a relatively steep learning curve.
 More research would have shown that there is a builtin standard deviation function, it's just that it was called "sd" instead of "std"</p>
-<pre class="code text"><a name="rest_code_8a160cb4225a4905ae26d6d6ff246986-1"></a>&gt; sd(whale)
-<a name="rest_code_8a160cb4225a4905ae26d6d6ff246986-2"></a>[4] 71.50789
+<pre class="code text"><a name="rest_code_814696d7a746406e85797610440b6849-1"></a>&gt; sd(whale)
+<a name="rest_code_814696d7a746406e85797610440b6849-2"></a>[4] 71.50789
 </pre>
 <p>Sometimes it's worth taking the extra time to do some research before storming forward and writing all of the code yourself.</p>
 <p>R has very extensive graphing capabilities, as well. It generates very high quality plots and graphs that you can use in publications.
 The commands can be very simple, if you just want a quick display so that you can visually inspect your data. If you want very
 specific output, with lots of markup and customizations, then R gives you full control over all of the details of your graphs. The
 most basic plot command is simply plot. Let's say that you have a series of two dimensional data</p>
-<pre class="code text"><a name="rest_code_ccc108f671224856938fd287e3c5b6ed-1"></a>&gt; x = c(1,2,3,4)
-<a name="rest_code_ccc108f671224856938fd287e3c5b6ed-2"></a>&gt; y = c(2,3,4,5)
-<a name="rest_code_ccc108f671224856938fd287e3c5b6ed-3"></a>&gt; plot(x,y)
+<pre class="code text"><a name="rest_code_0a9141bef7eb408cb3bb2785a96082ee-1"></a>&gt; x = c(1,2,3,4)
+<a name="rest_code_0a9141bef7eb408cb3bb2785a96082ee-2"></a>&gt; y = c(2,3,4,5)
+<a name="rest_code_0a9141bef7eb408cb3bb2785a96082ee-3"></a>&gt; plot(x,y)
 </pre>
 <p>This gives us the following plot.</p>
 <img alt="/images/R/gui2.png" src="../../images/R/gui2.png"><p>This looks like a straight line, so you probably want to do a linear regression on it.</p>
-<pre class="code text"><a name="rest_code_1f4f41ec7bc6467ca9d761fdb7113d69-1"></a>&gt; abline(lm(y~x))
+<pre class="code text"><a name="rest_code_37d9b5756b1e4ef9a1add2059acc33cb-1"></a>&gt; abline(lm(y~x))
 </pre>
 <p>This command does the linear regression of a straight line and plots it on the same plot.</p>
 <img alt="/images/R/gui3.png" src="../../images/R/gui3.png"><p>This seems like a pretty close fit, so we should probably look at the coefficients of the linear model</p>
-<pre class="code text"><a name="rest_code_f3c717ed368b420a9ce5cdac13a6136d-1"></a>&gt; lm(y~x)
-<a name="rest_code_f3c717ed368b420a9ce5cdac13a6136d-2"></a>Call:
-<a name="rest_code_f3c717ed368b420a9ce5cdac13a6136d-3"></a>lm(formula = y ~ x)
-<a name="rest_code_f3c717ed368b420a9ce5cdac13a6136d-4"></a>Coefficients:
-<a name="rest_code_f3c717ed368b420a9ce5cdac13a6136d-5"></a>(Intercept)           x
-<a name="rest_code_f3c717ed368b420a9ce5cdac13a6136d-6"></a>          1           1
+<pre class="code text"><a name="rest_code_71e6b0024823482185d2331ac8216b88-1"></a>&gt; lm(y~x)
+<a name="rest_code_71e6b0024823482185d2331ac8216b88-2"></a>Call:
+<a name="rest_code_71e6b0024823482185d2331ac8216b88-3"></a>lm(formula = y ~ x)
+<a name="rest_code_71e6b0024823482185d2331ac8216b88-4"></a>Coefficients:
+<a name="rest_code_71e6b0024823482185d2331ac8216b88-5"></a>(Intercept)           x
+<a name="rest_code_71e6b0024823482185d2331ac8216b88-6"></a>          1           1
 </pre>
 <p>So we end up with a straight line with a slope of 1 and an intercept of 1.</p>
 <p>Once you've done all of your analysis, you'll probably want to generate some nice plots for your publication. By default, when you
 call one of the plotting functions, the output is the graphical display. But you can change this to an output file of a particular
 format. Let's say you want to generate some PNG's.</p>
-<pre class="code text"><a name="rest_code_a094697c002742d0b68bd95e3d43087a-1"></a>&gt; png("filename.png")
-<a name="rest_code_a094697c002742d0b68bd95e3d43087a-2"></a>&gt; plot(x,y)
+<pre class="code text"><a name="rest_code_08093dfa9b47422585b4e9a68a7bda80-1"></a>&gt; png("filename.png")
+<a name="rest_code_08093dfa9b47422585b4e9a68a7bda80-2"></a>&gt; plot(x,y)
 </pre>
 <p>This will save your plot to the file "filename.png". You can also save to several other file formats (jpeg, pdf, postscript, etc).
 There are also lots of other options available, so check out the help page.</p>
@@ -183,14 +194,36 @@ you put too much work into it. Also, if there are any scientific packages or com
             <li class="next">
                 <a href="../handling-r-packages/" rel="next" title="Handling R Packages">Next post</a>
             </li>
-        </ul></nav></aside></article></main><footer id="footer"><p>Contents © 2020         <a href="mailto:druid.bernard@gmail.com">Joey Bernard</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
-            
-        </footer>
+        </ul></nav></aside></article>
 </div>
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                <div class="sidebar-module sidebar-module-inset">
+  <h4>About</h4>
+  <p>This is the Bootstrap Blog theme by @mdo, adapted for Nikola by @Kwpolska.
+  And this sidebar is completely customizable — you can put anything you want
+  here!</p>
+</div>
+<div class="sidebar-module">
+  <h4>Links</h4>
+  <ol class="list-unstyled">
+<li><a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog Theme</a></li>
+    <li><a href="https://getnikola.com/">Nikola</a></li>
+    <li><a href="https://twitter.com/mdo">@mdo</a></li>
+    <li><a href="https://twitter.com/Kwpolska">@Kwpolska</a></li>
+    <li><a href="https://twitter.com/GetNikola">@GetNikola</a></li>
+  </ol>
+</div>
+
+            </div>
+        <!--End of body content-->
+        </div>
+    </div>
+</div>
+
+<footer class="blog-footer" id="footer">
+    Contents © 2020         <a href="mailto:druid.bernard@gmail.com">Joey Bernard</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
     
-    
-<!-- Social buttons -->
-<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+</footer><script src="../../assets/js/all-nocdn.js"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
 <ul>
 <li>
@@ -204,7 +237,16 @@ you put too much work into it. Also, if there are any scientific packages or com
 </li>
 </ul>
 </div>
-<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><!-- Global Site Tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-146153844-1"></script><script>
+<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global Site Tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-146153844-1"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
