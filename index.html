@@ -70,38 +70,45 @@ one of the available GUI's, RStudio. RStudio is a commercial program, with a fre
 available for Linux, Mac OSX and Windows. So your data analysis work should port easily regardless of the
 environment you are working in.</p>
 <p>For Linux, you can install the main RStudio package by going to the main download page, located at</p>
-<dl class="simple">
-<dt>::</dt>
-<dd>
-<p><a class="reference external" href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></p>
-</dd>
-</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">&lt;string&gt;</span>, line 13)</p>
+<p>Content block expected for the "sourcecode" directive; none found.</p>
+<pre class="literal-block">.. sourcecode::
+   https://www.rstudio.com/products/rstudio/download/
+</pre>
+</div>
 <p>From here, you can download RPM files for RedHat based distributions or DEB files for Debian based
 distributions. You would then use either 'rpm' or 'dpkg' to do the installation. For example, in Debian based
 distributions, you would use the following to install RStudio:</p>
-<dl class="simple">
-<dt>::</dt>
-<dd>
-<p>sudo dpkg -i rstudio-xenial-1.1.423-amd64.deb</p>
-</dd>
-</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">&lt;string&gt;</span>, line 20)</p>
+<p>Error in "sourcecode" directive:
+maximum 1 argument(s) allowed, 4 supplied.</p>
+<pre class="literal-block">.. sourcecode::
+   sudo dpkg -i rstudio-xenial-1.1.423-amd64.deb
+</pre>
+</div>
 <p>It is important to note that RStudio is only the GUI interface. This means that you need to install R itself as
 a separate step. The core parts of R are installed with the command</p>
-<dl class="simple">
-<dt>::</dt>
-<dd>
-<p>sudo apt-get install r-base</p>
-</dd>
-</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">&lt;string&gt;</span>, line 26)</p>
+<p>Error in "sourcecode" directive:
+maximum 1 argument(s) allowed, 4 supplied.</p>
+<pre class="literal-block">.. sourcecode::
+   sudo apt-get install r-base
+</pre>
+</div>
 <p>There is also a community repository of packages available, called CRAN, that can add huge amounts of
 functionality to R. You will want to install at least some of these in order to have some common tools
 available. You can install the most common ones with the command</p>
-<dl class="simple">
-<dt>::</dt>
-<dd>
-<p>sudo apt-get install r-recommended</p>
-</dd>
-</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">&lt;string&gt;</span>, line 33)</p>
+<p>Error in "sourcecode" directive:
+maximum 1 argument(s) allowed, 4 supplied.</p>
+<pre class="literal-block">.. sourcecode::
+   sudo apt-get install r-recommended
+</pre>
+</div>
 <p>There are equivalent commands for RPM based distributions, too. At this point, you should have a complete system
 to do some data analysis.</p>
 <p>When you first start RStudio up, you should get a window that looks somewhat like the following image.</p>
@@ -139,21 +146,24 @@ reproduce analysis that was done at an earlier time.</p>
 libraries within R. There is a very complete, and complex, graphics ability within the core of R. For normal
 humans, there are several libraries built on top of this. One of the most popular, and for good reason, is
 ggplot. If it isn't already installed on your system, you can get it with the command</p>
-<dl class="simple">
-<dt>::</dt>
-<dd>
-<p>install.packages(c('ggplot2'))</p>
-</dd>
-</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">&lt;string&gt;</span>, line 92)</p>
+<p>Content block expected for the "sourcecode" directive; none found.</p>
+<pre class="literal-block">.. sourcecode::
+   install.packages(c('ggplot2'))
+</pre>
+</div>
 <p>Once it is installed, you can make a simple scatter plot with the following code.</p>
-<dl class="simple">
-<dt>::</dt>
-<dd>
-<p>library(ggplot2)
-c &lt;- data.frame(x=a, y=b)
-ggplot(c, aes(x=x, y=y)) + geom_point()</p>
-</dd>
-</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">&lt;string&gt;</span>, line 97)</p>
+<p>Error in "sourcecode" directive:
+maximum 1 argument(s) allowed, 10 supplied.</p>
+<pre class="literal-block">.. sourcecode::
+   library(ggplot2)
+   c &lt;- data.frame(x=a, y=b)
+   ggplot(c, aes(x=x, y=y)) + geom_point()
+</pre>
+</div>
 <p>As you can see, ggplot takes dataframes as the data to plot, and you control the display with 'aes()' function
 calls, and geom function calls. In this case, we used the 'geom_point()' function to say we wanted a scatter
 plot of points.</p>
