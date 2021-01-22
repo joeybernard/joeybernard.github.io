@@ -1,5 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Oct 2020 13:21:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Handling R Packages</title><link>https://joeybernard.github.io/posts/handling-r-packages/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;In a previous post, we looked at a quick introduction to the statistics program R. One of the great features of R is its modular nature. As people develop new functionality, R is designed to make it relatively easy to package up this new functionality and share it with other users of R. In fact, there is an entire repository of such packages, offering all sorts of goodies for your statistical needs. This month, we'll look at how to see what libraries are already installed, how to install new ones and keep them up to date. We'll finish off with a quick look at how to create your own.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Jan 2021 14:12:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Good Front-End for R </title><link>https://joeybernard.github.io/posts/a-good-front-end-for-r%20/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;In the past, I have written pieces on R. R is the defacto statistical package in the Open Source world. It is
+also fast becoming the default data analysis tool in many scientific disciplines. The core design of R is such
+that there is a central processing engine that runs your code, with a very simple interface to the outside
+world. This very simple interface means that it has been easy to build graphical interfaces that wrap the core
+portion of R, and so there are lots of options out there that you can use as a GUI. This month, we will look at
+one of the available GUI's, RStudio. RStudio is a commercial program, with a free community version, that is
+available for Linux, Mac OSX and Windows. So your data analysis work should port easily regardless of the
+environment you are working in.&lt;/p&gt;
+&lt;p&gt;For Linux, you can install the main RStudio package by going to the main download page, located at&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.rstudio.com/products/rstudio/download/"&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;From here, you can download RPM files for RedHat based distributions or DEB files for Debian based
+distributions. You would then use either 'rpm' or 'dpkg' to do the installation. For example, in Debian based
+distributions, you would use the following to install RStudio:&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;sudo dpkg -i rstudio-xenial-1.1.423-amd64.deb&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;It is important to note that RStudio is only the GUI interface. This means that you need to install R itself as
+a separate step. The core parts of R are installed with the command&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;sudo apt-get install r-base&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;There is also a community repository of packages available, called CRAN, that can add huge amounts of
+functionality to R. You will want to install at least some of these in order to have some common tools
+available. You can install the most common ones with the command&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;sudo apt-get install r-recommended&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;There are equivalent commands for RPM based distributions, too. At this point, you should have a complete system
+to do some data analysis.&lt;/p&gt;
+&lt;p&gt;When you first start RStudio up, you should get a window that looks somewhat like the following image.&lt;/p&gt;
+&lt;img alt="/images/R3/rstudio1.png" src="https://joeybernard.github.io/images/R3/rstudio1.png"&gt;
+&lt;p&gt;The main pane of the window, on the left-hand side, provides a console interface where you can
+interact directly with the R session that is running in the backend. The right-hand side is divided into two
+sections, where each section has multiple tabs available. The default tab in the top section is an environment
+pane. Here, you will see all of the objects that have been created and currently exist within the current R
+session. The other two tabs give you the history of every command given, and a list of any connections to
+external data sources. The bottom pane has five tabs available. The default tab gives you a file listing of the
+current working directory. The second tab gives you a plot window where any data plots you generate get
+displayed. The third tab gives you a nicely ordered view into the library system of R. It shows you a list of
+all of the currently install libraries, along with tools to manage updates and installing new libraries. The
+fourth tab is the help viewer. R includes a very complete and robust help system that is modeled on what you see
+in Linux man pages. The last tab is a general viewer pane to view other types of objects.&lt;/p&gt;
+&lt;p&gt;One part of RStudio that is a great help to people managing multiple areas of research is the ability to use
+projects. Clicking the menu item "File-&amp;gt;New Project..." pops up a new window where you can pick how your new
+project will exist on the filesystem.&lt;/p&gt;
+&lt;img alt="/images/R3/rstudio2.png" src="https://joeybernard.github.io/images/R3/rstudio2.png"&gt;
+&lt;p&gt;For this article, we will create a new project hosted in a
+local directory. The file display in the bottom right pane changes to the new directory and you should see a new
+file named after the project name, with the file name ending '.Rproj'. This file contains the configuration for
+your new project. While you can interact with the R session directly through the console, this doesn't really
+lead to easily reproduced workflows. A better solution, especially within a project, is to open a script editor
+and to write your code within a script file. This way, you automatically have a starting point when you move
+beyond the development phase of your research. When you click the menu item "File-&amp;gt;New File-&amp;gt;R Script" opens a
+new pane in the top left-hand side of the window.&lt;/p&gt;
+&lt;img alt="/images/R3/rstudio3.png" src="https://joeybernard.github.io/images/R3/rstudio3.png"&gt;
+&lt;p&gt;From here, you can now write your R code with
+all of the standard tools you would expect in a code editor. In order to execute this code that you have
+written, you have two options available. The first is to simply click the run button in the top right of this
+editor pane. This will run either the single line where the cursor is located, or an entire block of code that
+has been previously highlighted.&lt;/p&gt;
+&lt;img alt="/images/R3/rstudio4.png" src="https://joeybernard.github.io/images/R3/rstudio4.png"&gt;
+&lt;p&gt;If you have an entire script file that you want to run as a
+whole, you can click on the source button in the top right of the editor pane. This is handle in order to
+reproduce analysis that was done at an earlier time.&lt;/p&gt;
+&lt;p&gt;The last item to mention is data visualization in RStudio. Actually, the data visualization is handled by other
+libraries within R. There is a very complete, and complex, graphics ability within the core of R. For normal
+humans, there are several libraries built on top of this. One of the most popular, and for good reason, is
+ggplot. If it isn't already installed on your system, you can get it with the command&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;install.packages(c('ggplot2'))&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Once it is installed, you can make a simple scatter plot with the following code.&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;library(ggplot2)
+c &amp;lt;- data.frame(x=a, y=b)
+ggplot(c, aes(x=x, y=y)) + geom_point()&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;As you can see, ggplot takes dataframes as the data to plot, and you control the display with 'aes()' function
+calls, and geom function calls. In this case, we used the 'geom_point()' function to say we wanted a scatter
+plot of points.&lt;/p&gt;
+&lt;img alt="/images/R3/rstudio5.png" src="https://joeybernard.github.io/images/R3/rstudio5.png"&gt;
+&lt;p&gt;The plot then gets generated in the bottom left pane.&lt;/p&gt;
+&lt;p&gt;Hopefully this short article has exposed you to another tool that is available for your data analysis tasks.
+There is a lot of other functionality available in RStudio, including a server portion that can be run on a
+cluster. This allows you to develop code locally and then send it off to a server for the actual processing.&lt;/p&gt;&lt;/div&gt;</description><guid>https://joeybernard.github.io/posts/a-good-front-end-for-r%20/</guid><pubDate>Fri, 22 Jan 2021 13:53:02 GMT</pubDate></item><item><title>Handling R Packages</title><link>https://joeybernard.github.io/posts/handling-r-packages/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;In a previous post, we looked at a quick introduction to the statistics program R. One of the great features of R is its modular nature. As people develop new functionality, R is designed to make it relatively easy to package up this new functionality and share it with other users of R. In fact, there is an entire repository of such packages, offering all sorts of goodies for your statistical needs. This month, we'll look at how to see what libraries are already installed, how to install new ones and keep them up to date. We'll finish off with a quick look at how to create your own.&lt;/p&gt;
 &lt;p&gt;The first step is to take a look and see what libraries are already installed on your system.&lt;/p&gt;
 &lt;img alt="/images/R2/R1.png" src="https://joeybernard.github.io/images/R2/R1.png"&gt;
 &lt;p&gt;You can do this by running 'library()' from within R. This will give you a list of all of the libraries installed in the various locations visible to R. If you find the library that you are interested in, your work is almost done. In order to get R to load the library of interest into your workspace, you will need to call 'library' with the name of the library in the brackets. So, let's say you wanted to do parallel code with the multicore library. Then you would call 'library("multicore")'. If you want to learn more about the library, R includes a help system that is modelled after the man page system used in Linux. There are two ways you can access this. The first is the use the 'help()' command. So in this case, you would run 'help("multicore")'.&lt;/p&gt;
@@ -20,20 +118,20 @@
 &lt;img alt="/images/R2/R8.png" src="https://joeybernard.github.io/images/R2/R8.png"&gt;
 &lt;p&gt;We have been looking at dealing with individual packages, but sometimes, you will need functions provided by several different packages. In R parlance, there is something called a task view. These are groups of packages that are all useful for a particular area of research. If you are interested in using task views, you will need to start by installing the 'ctv' package. In R, run 'install.packages("ctv")' to install the main task view package. Once this is done, you can load the library with 'library("ctv")'. Now, you will have new functions included in the 'install' and 'update' packages. You can install a view, like the Graphics view, you can simply run 'install.views("Graphics")'. You can update these views as a whole with the command 'update.views()'. These task views, like all of the packages, are written and maintained by other users like yourself. So, if you have some area of research that isn't being served right now, you can step in and organize a new view yourself.&lt;/p&gt;
 &lt;p&gt;Up till now, we have been looking at how to use packages that have been written and provided by other people. But, if you are doing original research, you may end up developing totally new techniques and algorithms. Science and knowledge advance when we share with others, and so R tries to make it easy to create your own packages and share them with others through CRAN. There is a fixed directory layout, where you can put all of your code. You also need to include a file called 'DESCRIPTION', can a writeup of your package. An example of this file would look like&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-1"&gt;&lt;/a&gt;Package: pkgname
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-2"&gt;&lt;/a&gt;Version: 0.5-1
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-3"&gt;&lt;/a&gt;Date: 2011-01-01
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-4"&gt;&lt;/a&gt;Title: My first package
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-5"&gt;&lt;/a&gt;Author@R: c(person("Joe", "Developer", email = "me@dot.com"), person("A.", "User", role="ctb", email="you@dot.com"))
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-6"&gt;&lt;/a&gt;Author: Joe Developer &amp;lt;me@dot.com&amp;gt;, with contributions from A.
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-7"&gt;&lt;/a&gt;User &amp;lt;you@dot.com&amp;gt;
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-8"&gt;&lt;/a&gt;Maintainer: Joe Developer &amp;lt;me@dot.com&amp;gt;
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-9"&gt;&lt;/a&gt;Depends: R (&amp;gt;= 1.8.0), nlme
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-10"&gt;&lt;/a&gt;Suggests: MASS
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-11"&gt;&lt;/a&gt;Description: A short (one paragraph) description
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-12"&gt;&lt;/a&gt;License: GPL (&amp;gt;= 2)
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-13"&gt;&lt;/a&gt;URL: http://www.r-project.org, http://www.somesite.com
-&lt;a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-14"&gt;&lt;/a&gt;BugReports: http://bugtracker.com
+&lt;pre class="code text"&gt;&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-1"&gt;&lt;/a&gt;Package: pkgname
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-2"&gt;&lt;/a&gt;Version: 0.5-1
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-3"&gt;&lt;/a&gt;Date: 2011-01-01
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-4"&gt;&lt;/a&gt;Title: My first package
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-5"&gt;&lt;/a&gt;Author@R: c(person("Joe", "Developer", email = "me@dot.com"), person("A.", "User", role="ctb", email="you@dot.com"))
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-6"&gt;&lt;/a&gt;Author: Joe Developer &amp;lt;me@dot.com&amp;gt;, with contributions from A.
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-7"&gt;&lt;/a&gt;User &amp;lt;you@dot.com&amp;gt;
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-8"&gt;&lt;/a&gt;Maintainer: Joe Developer &amp;lt;me@dot.com&amp;gt;
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-9"&gt;&lt;/a&gt;Depends: R (&amp;gt;= 1.8.0), nlme
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-10"&gt;&lt;/a&gt;Suggests: MASS
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-11"&gt;&lt;/a&gt;Description: A short (one paragraph) description
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-12"&gt;&lt;/a&gt;License: GPL (&amp;gt;= 2)
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-13"&gt;&lt;/a&gt;URL: http://www.r-project.org, http://www.somesite.com
+&lt;a name="rest_code_75f635aad5464ad283611f8239a498fa-14"&gt;&lt;/a&gt;BugReports: http://bugtracker.com
 &lt;/pre&gt;&lt;p&gt;Once you have all of your code and data files written and packaged, you can go ahead and run a check on your new package by running the command 'R CMD check /path/to/package' on the command line. This will run through some standard checks to be sure that everything is where R expects things. Once your package passes these checks, you can run 'R CMD build /path/to/package' to see if R can build your package properly. This especially important if you have external code in another programming language. Once your package passes the checks and builds correctly, you can bundle it up as a tarball and send it up to &lt;a class="reference external" href="ftp://CRAN.R-project.org/incoming/"&gt;ftp://CRAN.R-project.org/incoming/&lt;/a&gt; as anonymous, and then send an email to &lt;a class="reference external" href="mailto:CRAN@R-project.org"&gt;CRAN@R-project.org&lt;/a&gt;. Once your package has been checked by someone at CRAN to verify that it builds correctly, your newly created package will be added to the repository. Fame and fortune will be soon to follow.&lt;/p&gt;
 &lt;p&gt;Hopefully this article has provided enough information to help you get even more work done in R. And remember, we all progress when we share, so hopefully you will be able to add to the functionality available to the whole community.&lt;/p&gt;
 &lt;p&gt;URLs
@@ -55,81 +153,81 @@ in R, so we'll be using the text interface. To start it, you simply have to type
 &lt;p&gt;To quit R, you
 simply have to type "q();" and hit enter. In R, commands can end with either a semi-colon or a newline.&lt;/p&gt;
 &lt;p&gt;R has very extensive help files available for all of the commands and functions. Accessing these help pages can be done two ways:&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_297a6ebd47614ae3a9b8836c51341fb0-1"&gt;&lt;/a&gt;&amp;gt; help(command)
-&lt;a name="rest_code_297a6ebd47614ae3a9b8836c51341fb0-2"&gt;&lt;/a&gt;or
-&lt;a name="rest_code_297a6ebd47614ae3a9b8836c51341fb0-3"&gt;&lt;/a&gt;&amp;gt; ?command
+&lt;pre class="code text"&gt;&lt;a name="rest_code_a64a1d1177b04a86a7b7de8581c88e0e-1"&gt;&lt;/a&gt;&amp;gt; help(command)
+&lt;a name="rest_code_a64a1d1177b04a86a7b7de8581c88e0e-2"&gt;&lt;/a&gt;or
+&lt;a name="rest_code_a64a1d1177b04a86a7b7de8581c88e0e-3"&gt;&lt;/a&gt;&amp;gt; ?command
 &lt;/pre&gt;&lt;p&gt;These help pages are in the form of man pages.&lt;/p&gt;
 &lt;img alt="/images/R/text2.png" src="https://joeybernard.github.io/images/R/text2.png"&gt;
 &lt;p&gt;You can run a whole series of commands by using the source command&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_280b13d2b7404fe997d4ef7e22e43be6-1"&gt;&lt;/a&gt;&amp;gt; source("commands.R")
+&lt;pre class="code text"&gt;&lt;a name="rest_code_044f1442287c460689e145f3e14c64e9-1"&gt;&lt;/a&gt;&amp;gt; source("commands.R")
 &lt;/pre&gt;&lt;p&gt;where the file "commands.R" contains all of the commands that you want to run as a single block. Think of this as if it were a shell
 script. You can send your output to a file with the sink command&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_60d5e6a02cc849b0ad73a8b3767d0bf8-1"&gt;&lt;/a&gt;&amp;gt; sink("output.txt")
+&lt;pre class="code text"&gt;&lt;a name="rest_code_d8d8cac2b4764780beb4686ffa8f325a-1"&gt;&lt;/a&gt;&amp;gt; sink("output.txt")
 &lt;/pre&gt;&lt;p&gt;Once you are done writing the output, you can reset the output back to the console with&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_fbd84ef102084af59f8edebe4abdf6fa-1"&gt;&lt;/a&gt;&amp;gt; sink()
+&lt;pre class="code text"&gt;&lt;a name="rest_code_d84d98232aaa4e36baac39ca3c8ecba7-1"&gt;&lt;/a&gt;&amp;gt; sink()
 &lt;/pre&gt;&lt;p&gt;R can handle basic statistics out of the box. The available functions can do all of the single variable statistics that you are
 familiar doing. The first step is to load data. Data is stored in lists. These lists can be arranged as arrays and matrices. The
 easiest way to create data arrays is to use the concatenation function "c". This works well when you only have a little bit of data
 to work with.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_d58ef6dc5c1942d1a54fcd2344602502-1"&gt;&lt;/a&gt;&amp;gt; data1 = c(2,3,4,2,0,1,2)
+&lt;pre class="code text"&gt;&lt;a name="rest_code_a45a9c6136684cb68da17de351037b0b-1"&gt;&lt;/a&gt;&amp;gt; data1 = c(2,3,4,2,0,1,2)
 &lt;/pre&gt;&lt;p&gt;This creates a single list, and dumps these values into the variable data1. Then you can use this variable in other functions. For
 example, if you wanted to find the average of these values, you would use&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_abf009c9958d445989ed16db458abce2-1"&gt;&lt;/a&gt;&amp;gt; mean(data1)
-&lt;a name="rest_code_abf009c9958d445989ed16db458abce2-2"&gt;&lt;/a&gt;[1] 2
+&lt;pre class="code text"&gt;&lt;a name="rest_code_e31c50b91d444d31a1a3aef6ed6db922-1"&gt;&lt;/a&gt;&amp;gt; mean(data1)
+&lt;a name="rest_code_e31c50b91d444d31a1a3aef6ed6db922-2"&gt;&lt;/a&gt;[1] 2
 &lt;/pre&gt;&lt;p&gt;The second line above is the output from the function "mean". Output is labeled with a numeric label "[1]". The output from the first
 command in a session has the label "[1]", the output from the second command is labeled "[2]", and so on. If you have a larger amount
 of data that you need to work with, you can use the read command to read in a file. If that data is in a table format, you can read
 that table in as a whole by using&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_a05dae6f57c64810b3900df11c9af5d8-1"&gt;&lt;/a&gt;&amp;gt; DataToUse = read.table("research.data")
+&lt;pre class="code text"&gt;&lt;a name="rest_code_9aab1478ccd1417ea0ac35b722f4abe1-1"&gt;&lt;/a&gt;&amp;gt; DataToUse = read.table("research.data")
 &lt;/pre&gt;&lt;p&gt;You can access individual data elements by using the "[]" characters. So printing the second item is as simple as&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_d2a3545789374370a7141eb71ad66960-1"&gt;&lt;/a&gt;&amp;gt; data1[2]
-&lt;a name="rest_code_d2a3545789374370a7141eb71ad66960-2"&gt;&lt;/a&gt;[1] 3
+&lt;pre class="code text"&gt;&lt;a name="rest_code_f34f6357f0864595b80729f221f888ce-1"&gt;&lt;/a&gt;&amp;gt; data1[2]
+&lt;a name="rest_code_f34f6357f0864595b80729f221f888ce-2"&gt;&lt;/a&gt;[1] 3
 &lt;/pre&gt;&lt;p&gt;If you wanted to set a value in a vector, you can use&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_342ebad48d9548da875202687b8faa48-1"&gt;&lt;/a&gt;&amp;gt; data1[2] = 5
+&lt;pre class="code text"&gt;&lt;a name="rest_code_11c3d91bb66c43088b7c59a5e039c12a-1"&gt;&lt;/a&gt;&amp;gt; data1[2] = 5
 &lt;/pre&gt;&lt;p&gt;So, let's say that you were making some measurements on whales. You would start by saving the data into a variable.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_b5ba096667ad482e9b284a4e36065c61-1"&gt;&lt;/a&gt;&amp;gt; whale = c(74,122,235,111,292,111,211,133,156,79)
+&lt;pre class="code text"&gt;&lt;a name="rest_code_f8b88e04234c4965ac808e9102e30a24-1"&gt;&lt;/a&gt;&amp;gt; whale = c(74,122,235,111,292,111,211,133,156,79)
 &lt;/pre&gt;&lt;p&gt;The first thing you would want to do is to run some basic statistical functions to find the mean, variance and standard deviation&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-1"&gt;&lt;/a&gt;&amp;gt; mean(whale)
-&lt;a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-2"&gt;&lt;/a&gt;[1] 152.4
-&lt;a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-3"&gt;&lt;/a&gt;&amp;gt; var(whale)
-&lt;a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-4"&gt;&lt;/a&gt;[2] 5113.378
-&lt;a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-5"&gt;&lt;/a&gt;&amp;gt;std(whale)
-&lt;a name="rest_code_10f9cdfc079e401c8bf32bc9bda93ec0-6"&gt;&lt;/a&gt;Error: couldn't find function "std"
+&lt;pre class="code text"&gt;&lt;a name="rest_code_8be8606874d2450297dde235a7c3a64c-1"&gt;&lt;/a&gt;&amp;gt; mean(whale)
+&lt;a name="rest_code_8be8606874d2450297dde235a7c3a64c-2"&gt;&lt;/a&gt;[1] 152.4
+&lt;a name="rest_code_8be8606874d2450297dde235a7c3a64c-3"&gt;&lt;/a&gt;&amp;gt; var(whale)
+&lt;a name="rest_code_8be8606874d2450297dde235a7c3a64c-4"&gt;&lt;/a&gt;[2] 5113.378
+&lt;a name="rest_code_8be8606874d2450297dde235a7c3a64c-5"&gt;&lt;/a&gt;&amp;gt;std(whale)
+&lt;a name="rest_code_8be8606874d2450297dde235a7c3a64c-6"&gt;&lt;/a&gt;Error: couldn't find function "std"
 &lt;/pre&gt;&lt;p&gt;It looks like there is no standard deviation function. But, since R is a full programming language, you can write your own.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_7161da8548b14ed39a411132c76ff28e-1"&gt;&lt;/a&gt;&amp;gt; std = function(x) sqrt(var(x))
-&lt;a name="rest_code_7161da8548b14ed39a411132c76ff28e-2"&gt;&lt;/a&gt;&amp;gt; std(whale)
-&lt;a name="rest_code_7161da8548b14ed39a411132c76ff28e-3"&gt;&lt;/a&gt;[3] 71.50789
+&lt;pre class="code text"&gt;&lt;a name="rest_code_85dcc555ac314c3bb97c2547a1f287d7-1"&gt;&lt;/a&gt;&amp;gt; std = function(x) sqrt(var(x))
+&lt;a name="rest_code_85dcc555ac314c3bb97c2547a1f287d7-2"&gt;&lt;/a&gt;&amp;gt; std(whale)
+&lt;a name="rest_code_85dcc555ac314c3bb97c2547a1f287d7-3"&gt;&lt;/a&gt;[3] 71.50789
 &lt;/pre&gt;&lt;p&gt;This shows one of the shortcomings of R. Since it is such a large system, it does tend to have a relatively steep learning curve.
 More research would have shown that there is a builtin standard deviation function, it's just that it was called "sd" instead of "std"&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_814696d7a746406e85797610440b6849-1"&gt;&lt;/a&gt;&amp;gt; sd(whale)
-&lt;a name="rest_code_814696d7a746406e85797610440b6849-2"&gt;&lt;/a&gt;[4] 71.50789
+&lt;pre class="code text"&gt;&lt;a name="rest_code_520b422667a34a72824086245fa6123b-1"&gt;&lt;/a&gt;&amp;gt; sd(whale)
+&lt;a name="rest_code_520b422667a34a72824086245fa6123b-2"&gt;&lt;/a&gt;[4] 71.50789
 &lt;/pre&gt;&lt;p&gt;Sometimes it's worth taking the extra time to do some research before storming forward and writing all of the code yourself.&lt;/p&gt;
 &lt;p&gt;R has very extensive graphing capabilities, as well. It generates very high quality plots and graphs that you can use in publications.
 The commands can be very simple, if you just want a quick display so that you can visually inspect your data. If you want very
 specific output, with lots of markup and customizations, then R gives you full control over all of the details of your graphs. The
 most basic plot command is simply plot. Let's say that you have a series of two dimensional data&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_0a9141bef7eb408cb3bb2785a96082ee-1"&gt;&lt;/a&gt;&amp;gt; x = c(1,2,3,4)
-&lt;a name="rest_code_0a9141bef7eb408cb3bb2785a96082ee-2"&gt;&lt;/a&gt;&amp;gt; y = c(2,3,4,5)
-&lt;a name="rest_code_0a9141bef7eb408cb3bb2785a96082ee-3"&gt;&lt;/a&gt;&amp;gt; plot(x,y)
+&lt;pre class="code text"&gt;&lt;a name="rest_code_7a1b6b5f4ceb49a4bfd0203d14ed03e4-1"&gt;&lt;/a&gt;&amp;gt; x = c(1,2,3,4)
+&lt;a name="rest_code_7a1b6b5f4ceb49a4bfd0203d14ed03e4-2"&gt;&lt;/a&gt;&amp;gt; y = c(2,3,4,5)
+&lt;a name="rest_code_7a1b6b5f4ceb49a4bfd0203d14ed03e4-3"&gt;&lt;/a&gt;&amp;gt; plot(x,y)
 &lt;/pre&gt;&lt;p&gt;This gives us the following plot.&lt;/p&gt;
 &lt;img alt="/images/R/gui2.png" src="https://joeybernard.github.io/images/R/gui2.png"&gt;
 &lt;p&gt;This looks like a straight line, so you probably want to do a linear regression on it.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_37d9b5756b1e4ef9a1add2059acc33cb-1"&gt;&lt;/a&gt;&amp;gt; abline(lm(y~x))
+&lt;pre class="code text"&gt;&lt;a name="rest_code_379c95012b0642f38e068f6ca4ddcfbc-1"&gt;&lt;/a&gt;&amp;gt; abline(lm(y~x))
 &lt;/pre&gt;&lt;p&gt;This command does the linear regression of a straight line and plots it on the same plot.&lt;/p&gt;
 &lt;img alt="/images/R/gui3.png" src="https://joeybernard.github.io/images/R/gui3.png"&gt;
 &lt;p&gt;This seems like a pretty close fit, so we should probably look at the coefficients of the linear model&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_71e6b0024823482185d2331ac8216b88-1"&gt;&lt;/a&gt;&amp;gt; lm(y~x)
-&lt;a name="rest_code_71e6b0024823482185d2331ac8216b88-2"&gt;&lt;/a&gt;Call:
-&lt;a name="rest_code_71e6b0024823482185d2331ac8216b88-3"&gt;&lt;/a&gt;lm(formula = y ~ x)
-&lt;a name="rest_code_71e6b0024823482185d2331ac8216b88-4"&gt;&lt;/a&gt;Coefficients:
-&lt;a name="rest_code_71e6b0024823482185d2331ac8216b88-5"&gt;&lt;/a&gt;(Intercept)           x
-&lt;a name="rest_code_71e6b0024823482185d2331ac8216b88-6"&gt;&lt;/a&gt;          1           1
+&lt;pre class="code text"&gt;&lt;a name="rest_code_bc8446c8308d4fd49d7461dd2cd9c09e-1"&gt;&lt;/a&gt;&amp;gt; lm(y~x)
+&lt;a name="rest_code_bc8446c8308d4fd49d7461dd2cd9c09e-2"&gt;&lt;/a&gt;Call:
+&lt;a name="rest_code_bc8446c8308d4fd49d7461dd2cd9c09e-3"&gt;&lt;/a&gt;lm(formula = y ~ x)
+&lt;a name="rest_code_bc8446c8308d4fd49d7461dd2cd9c09e-4"&gt;&lt;/a&gt;Coefficients:
+&lt;a name="rest_code_bc8446c8308d4fd49d7461dd2cd9c09e-5"&gt;&lt;/a&gt;(Intercept)           x
+&lt;a name="rest_code_bc8446c8308d4fd49d7461dd2cd9c09e-6"&gt;&lt;/a&gt;          1           1
 &lt;/pre&gt;&lt;p&gt;So we end up with a straight line with a slope of 1 and an intercept of 1.&lt;/p&gt;
 &lt;p&gt;Once you've done all of your analysis, you'll probably want to generate some nice plots for your publication. By default, when you
 call one of the plotting functions, the output is the graphical display. But you can change this to an output file of a particular
 format. Let's say you want to generate some PNG's.&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_08093dfa9b47422585b4e9a68a7bda80-1"&gt;&lt;/a&gt;&amp;gt; png("filename.png")
-&lt;a name="rest_code_08093dfa9b47422585b4e9a68a7bda80-2"&gt;&lt;/a&gt;&amp;gt; plot(x,y)
+&lt;pre class="code text"&gt;&lt;a name="rest_code_7029ce65899042229b8a7ec87601d8ed-1"&gt;&lt;/a&gt;&amp;gt; png("filename.png")
+&lt;a name="rest_code_7029ce65899042229b8a7ec87601d8ed-2"&gt;&lt;/a&gt;&amp;gt; plot(x,y)
 &lt;/pre&gt;&lt;p&gt;This will save your plot to the file "filename.png". You can also save to several other file formats (jpeg, pdf, postscript, etc).
 There are also lots of other options available, so check out the help page.&lt;/p&gt;
 &lt;p&gt;This short crash course should give you an idea and starting point to exploring R. A good place to look for more information is the
