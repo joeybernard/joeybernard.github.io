@@ -19,27 +19,27 @@ environment you are working in.
 
 For Linux, you can install the main RStudio package by going to the main download page, located at 
 
-::
+.. sourcecode::
    https://www.rstudio.com/products/rstudio/download/
 
 From here, you can download RPM files for RedHat based distributions or DEB files for Debian based 
 distributions. You would then use either 'rpm' or 'dpkg' to do the installation. For example, in Debian based 
 distributions, you would use the following to install RStudio: 
 
-::
+.. sourcecode::
    sudo dpkg -i rstudio-xenial-1.1.423-amd64.deb
 
 It is important to note that RStudio is only the GUI interface. This means that you need to install R itself as 
 a separate step. The core parts of R are installed with the command 
 
-::
+.. sourcecode::
    sudo apt-get install r-base
 
 There is also a community repository of packages available, called CRAN, that can add huge amounts of 
 functionality to R. You will want to install at least some of these in order to have some common tools 
 available. You can install the most common ones with the command 
 
-::
+.. sourcecode::
    sudo apt-get install r-recommended
 
 There are equivalent commands for RPM based distributions, too. At this point, you should have a complete system 
@@ -98,12 +98,12 @@ libraries within R. There is a very complete, and complex, graphics ability with
 humans, there are several libraries built on top of this. One of the most popular, and for good reason, is 
 ggplot. If it isn't already installed on your system, you can get it with the command 
 
-::
+.. sourcecode::
    install.packages(c('ggplot2'))
 
 Once it is installed, you can make a simple scatter plot with the following code.
 
-::
+.. sourcecode::
    library(ggplot2)
    c <- data.frame(x=a, y=b)
    ggplot(c, aes(x=x, y=y)) + geom_point()
