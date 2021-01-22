@@ -1219,30 +1219,29 @@ EXTRA_HEAD_DATA = """
   gtag('config', 'G-LPPEVREW66');
 </script>
 """
-# Google 
-Analytics or whatever else you use. Added to the bottom of <body>
+# Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
 # BODY_END = ""
-BODY_END = """
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146153844-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-146153844-1');
-</script>
-
-<!-- Google AdSense -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "pub-8127726707137346",
-    enable_page_level_ads: true
-  });
-</script>
-"""
+#BODY_END = """
+#<!-- Global Site Tag (gtag.js) - Google Analytics -->
+#<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146153844-1"></script>
+#<script>
+#  window.dataLayer = window.dataLayer || [];
+#  function gtag(){dataLayer.push(arguments);}
+#  gtag('js', new Date());
+#  gtag('config', 'UA-146153844-1');
+#</script>
+#
+#<!-- Google AdSense -->
+#<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+#<script>
+#  (adsbygoogle = window.adsbygoogle || []).push({
+#    google_ad_client: "pub-8127726707137346",
+#    enable_page_level_ads: true
+#  });
+#</script>
+#"""
 # The possibility to extract metadata from the filename by using a
 # regular expression.
 # To make it work you need to name parts of your regular expression.
