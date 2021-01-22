@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Jan 2021 14:31:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Good Front-End for R </title><link>https://joeybernard.github.io/posts/a-good-front-end-for-r%20/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;In the past, I have written pieces on R. R is the defacto statistical package in the Open Source world. It is
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rational Druid</title><link>https://joeybernard.github.io/</link><description>This a site on science, nature and coding.</description><atom:link href="https://joeybernard.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:druid.bernard@gmail.com"&gt;Joey Bernard&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Jan 2021 14:32:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Good Front-End for R </title><link>https://joeybernard.github.io/posts/a-good-front-end-for-r%20/</link><dc:creator>Joey Bernard</dc:creator><description>&lt;div&gt;&lt;p&gt;In the past, I have written pieces on R. R is the defacto statistical package in the Open Source world. It is
 also fast becoming the default data analysis tool in many scientific disciplines. The core design of R is such
 that there is a central processing engine that runs your code, with a very simple interface to the outside
 world. This very simple interface means that it has been easy to build graphical interfaces that wrap the core
@@ -8,46 +8,19 @@ one of the available GUI's, RStudio. RStudio is a commercial program, with a fre
 available for Linux, Mac OSX and Windows. So your data analysis work should port easily regardless of the
 environment you are working in.&lt;/p&gt;
 &lt;p&gt;For Linux, you can install the main RStudio package by going to the main download page, located at&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 13)&lt;/p&gt;
-&lt;p&gt;Content block expected for the "sourcecode" directive; none found.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;.. sourcecode::
-   https://www.rstudio.com/products/rstudio/download/
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;From here, you can download RPM files for RedHat based distributions or DEB files for Debian based
+&lt;pre class="code text"&gt;&lt;a name="rest_code_d1574da2f21e4588a74fc4e26f90093a-1"&gt;&lt;/a&gt;https://www.rstudio.com/products/rstudio/download/
+&lt;/pre&gt;&lt;p&gt;From here, you can download RPM files for RedHat based distributions or DEB files for Debian based
 distributions. You would then use either 'rpm' or 'dpkg' to do the installation. For example, in Debian based
 distributions, you would use the following to install RStudio:&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 20)&lt;/p&gt;
-&lt;p&gt;Error in "sourcecode" directive:
-maximum 1 argument(s) allowed, 4 supplied.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;.. sourcecode::
-   sudo dpkg -i rstudio-xenial-1.1.423-amd64.deb
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;It is important to note that RStudio is only the GUI interface. This means that you need to install R itself as
+&lt;pre class="code text"&gt;&lt;a name="rest_code_f08418ac4bfb4e588e460e6e6c1865e9-1"&gt;&lt;/a&gt;sudo dpkg -i rstudio-xenial-1.1.423-amd64.deb
+&lt;/pre&gt;&lt;p&gt;It is important to note that RStudio is only the GUI interface. This means that you need to install R itself as
 a separate step. The core parts of R are installed with the command&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 26)&lt;/p&gt;
-&lt;p&gt;Error in "sourcecode" directive:
-maximum 1 argument(s) allowed, 4 supplied.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;.. sourcecode::
-   sudo apt-get install r-base
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;There is also a community repository of packages available, called CRAN, that can add huge amounts of
+&lt;pre class="code text"&gt;&lt;a name="rest_code_f0e1f52648ac488a8f7073a1439af6aa-1"&gt;&lt;/a&gt;sudo apt-get install r-base
+&lt;/pre&gt;&lt;p&gt;There is also a community repository of packages available, called CRAN, that can add huge amounts of
 functionality to R. You will want to install at least some of these in order to have some common tools
 available. You can install the most common ones with the command&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 33)&lt;/p&gt;
-&lt;p&gt;Error in "sourcecode" directive:
-maximum 1 argument(s) allowed, 4 supplied.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;.. sourcecode::
-   sudo apt-get install r-recommended
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;There are equivalent commands for RPM based distributions, too. At this point, you should have a complete system
+&lt;pre class="code text"&gt;&lt;a name="rest_code_3e315e7601be4bf4a1f3c6df96a4625d-1"&gt;&lt;/a&gt;sudo apt-get install r-recommended
+&lt;/pre&gt;&lt;p&gt;There are equivalent commands for RPM based distributions, too. At this point, you should have a complete system
 to do some data analysis.&lt;/p&gt;
 &lt;p&gt;When you first start RStudio up, you should get a window that looks somewhat like the following image.&lt;/p&gt;
 &lt;img alt="/images/R3/rstudio1.png" src="https://joeybernard.github.io/images/R3/rstudio1.png"&gt;
@@ -88,25 +61,12 @@ reproduce analysis that was done at an earlier time.&lt;/p&gt;
 libraries within R. There is a very complete, and complex, graphics ability within the core of R. For normal
 humans, there are several libraries built on top of this. One of the most popular, and for good reason, is
 ggplot. If it isn't already installed on your system, you can get it with the command&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 92)&lt;/p&gt;
-&lt;p&gt;Content block expected for the "sourcecode" directive; none found.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;.. sourcecode::
-   install.packages(c('ggplot2'))
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Once it is installed, you can make a simple scatter plot with the following code.&lt;/p&gt;
-&lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 97)&lt;/p&gt;
-&lt;p&gt;Error in "sourcecode" directive:
-maximum 1 argument(s) allowed, 10 supplied.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;.. sourcecode::
-   library(ggplot2)
-   c &amp;lt;- data.frame(x=a, y=b)
-   ggplot(c, aes(x=x, y=y)) + geom_point()
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;As you can see, ggplot takes dataframes as the data to plot, and you control the display with 'aes()' function
+&lt;pre class="code text"&gt;&lt;a name="rest_code_f2a45c079da04141a767d300e4c7e146-1"&gt;&lt;/a&gt;install.packages(c('ggplot2'))
+&lt;/pre&gt;&lt;p&gt;Once it is installed, you can make a simple scatter plot with the following code.&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_f3810d032abc4203be6604371f30d374-1"&gt;&lt;/a&gt;library(ggplot2)
+&lt;a name="rest_code_f3810d032abc4203be6604371f30d374-2"&gt;&lt;/a&gt;c &amp;lt;- data.frame(x=a, y=b)
+&lt;a name="rest_code_f3810d032abc4203be6604371f30d374-3"&gt;&lt;/a&gt;ggplot(c, aes(x=x, y=y)) + geom_point()
+&lt;/pre&gt;&lt;p&gt;As you can see, ggplot takes dataframes as the data to plot, and you control the display with 'aes()' function
 calls, and geom function calls. In this case, we used the 'geom_point()' function to say we wanted a scatter
 plot of points.&lt;/p&gt;
 &lt;img alt="/images/R3/rstudio5.png" src="https://joeybernard.github.io/images/R3/rstudio5.png"&gt;
