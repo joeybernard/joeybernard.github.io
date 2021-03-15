@@ -15,7 +15,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-LPPEVREW66');
-</script><link rel="prefetch" href="posts/a-good-front-end-for-r%20/" type="text/html">
+</script><link rel="prefetch" href="posts/o-problems-in-bash/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -61,7 +61,19 @@
                 
 
 <div class="postindex">
-    <article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/a-good-front-end-for-r%20/" class="u-url">A Good Front-End for R </a></h2>
+    <article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/o-problems-in-bash/" class="u-url">O Problems in bash</a></h2>
+        <div class="metadata blog-post-meta">
+            <p class="byline author vcard"><span class="byline-name fn">Joey Bernard</span></p>
+            <p class="dateline"><a href="posts/o-problems-in-bash/" rel="bookmark"><time class="published dt-published" datetime="2021-03-14T21:37:57-03:00" title="2021-03-14 21:37">2021-03-14 21:37</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Recently, I ended up with a bit of a weird problem at work. We collect data files that need to be processed every 15 minutes. At the hour mark, we need to process files that have been collecting data over the last 15 minutes of the previous hour. The way I originally wrote the script, it would use the date command to get the current hour and then use bash arithmetic to subtract one from it. But, I was seeing weird behaviour around 0800 hours. What the heck was going on here?</p>
+<p>What I didn't realize was that bash uses a zero at the beginning of a number to identify it as an octal number. So what do you think happens when you get a two-digit number as a string from an external program, like date? At 0800 hours, you get an error because 08 is not a valid octal number. Of course, you don't get an error message that actually makes sense given this problem. So it took some creative Googling to actually figure out what assumption had bitten me in the back-side.</p>
+<p>Luckily, the date command allows you to get things like the current hour value, minus X number of hours. This was a much cleaner, better way to handle this type of arithmetic. Hopefully, this is of some use to other people running into their own blind spots.</p>
+</div>
+    </div>
+    </article><article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/a-good-front-end-for-r%20/" class="u-url">A Good Front-End for R </a></h2>
         <div class="metadata blog-post-meta">
             <p class="byline author vcard"><span class="byline-name fn">Joey Bernard</span></p>
             <p class="dateline"><a href="posts/a-good-front-end-for-r%20/" rel="bookmark"><time class="published dt-published" datetime="2021-01-22T09:53:02-04:00" title="2021-01-22 09:53">2021-01-22 09:53</time></a></p>
