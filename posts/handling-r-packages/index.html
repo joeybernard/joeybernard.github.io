@@ -94,20 +94,20 @@
 <img alt="/images/R2/R7.png" src="../../images/R2/R7.png"><p>To load a particular data file, you will need to call data with the data file you are interested in. For example, if you wanted to play with water levels in Lake Huron, you would call 'data(LakeHuron)'. You can get more information on the data, including a description and a list of the variables available, by running '?LakeHuron'.</p>
 <img alt="/images/R2/R8.png" src="../../images/R2/R8.png"><p>We have been looking at dealing with individual packages, but sometimes, you will need functions provided by several different packages. In R parlance, there is something called a task view. These are groups of packages that are all useful for a particular area of research. If you are interested in using task views, you will need to start by installing the 'ctv' package. In R, run 'install.packages("ctv")' to install the main task view package. Once this is done, you can load the library with 'library("ctv")'. Now, you will have new functions included in the 'install' and 'update' packages. You can install a view, like the Graphics view, you can simply run 'install.views("Graphics")'. You can update these views as a whole with the command 'update.views()'. These task views, like all of the packages, are written and maintained by other users like yourself. So, if you have some area of research that isn't being served right now, you can step in and organize a new view yourself.</p>
 <p>Up till now, we have been looking at how to use packages that have been written and provided by other people. But, if you are doing original research, you may end up developing totally new techniques and algorithms. Science and knowledge advance when we share with others, and so R tries to make it easy to create your own packages and share them with others through CRAN. There is a fixed directory layout, where you can put all of your code. You also need to include a file called 'DESCRIPTION', can a writeup of your package. An example of this file would look like</p>
-<pre class="code text"><a name="rest_code_75f635aad5464ad283611f8239a498fa-1"></a>Package: pkgname
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-2"></a>Version: 0.5-1
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-3"></a>Date: 2011-01-01
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-4"></a>Title: My first package
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-5"></a>Author@R: c(person("Joe", "Developer", email = "me@dot.com"), person("A.", "User", role="ctb", email="you@dot.com"))
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-6"></a>Author: Joe Developer &lt;me@dot.com&gt;, with contributions from A.
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-7"></a>User &lt;you@dot.com&gt;
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-8"></a>Maintainer: Joe Developer &lt;me@dot.com&gt;
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-9"></a>Depends: R (&gt;= 1.8.0), nlme
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-10"></a>Suggests: MASS
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-11"></a>Description: A short (one paragraph) description
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-12"></a>License: GPL (&gt;= 2)
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-13"></a>URL: http://www.r-project.org, http://www.somesite.com
-<a name="rest_code_75f635aad5464ad283611f8239a498fa-14"></a>BugReports: http://bugtracker.com
+<pre class="code text"><a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-1"></a>Package: pkgname
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-2"></a>Version: 0.5-1
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-3"></a>Date: 2011-01-01
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-4"></a>Title: My first package
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-5"></a>Author@R: c(person("Joe", "Developer", email = "me@dot.com"), person("A.", "User", role="ctb", email="you@dot.com"))
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-6"></a>Author: Joe Developer &lt;me@dot.com&gt;, with contributions from A.
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-7"></a>User &lt;you@dot.com&gt;
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-8"></a>Maintainer: Joe Developer &lt;me@dot.com&gt;
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-9"></a>Depends: R (&gt;= 1.8.0), nlme
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-10"></a>Suggests: MASS
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-11"></a>Description: A short (one paragraph) description
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-12"></a>License: GPL (&gt;= 2)
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-13"></a>URL: http://www.r-project.org, http://www.somesite.com
+<a name="rest_code_08f6fdd2404b448c96bbf7e36c0785db-14"></a>BugReports: http://bugtracker.com
 </pre>
 <p>Once you have all of your code and data files written and packaged, you can go ahead and run a check on your new package by running the command 'R CMD check /path/to/package' on the command line. This will run through some standard checks to be sure that everything is where R expects things. Once your package passes these checks, you can run 'R CMD build /path/to/package' to see if R can build your package properly. This especially important if you have external code in another programming language. Once your package passes the checks and builds correctly, you can bundle it up as a tarball and send it up to <a class="reference external" href="ftp://CRAN.R-project.org/incoming/">ftp://CRAN.R-project.org/incoming/</a> as anonymous, and then send an email to <a class="reference external" href="mailto:CRAN@R-project.org">CRAN@R-project.org</a>. Once your package has been checked by someone at CRAN to verify that it builds correctly, your newly created package will be added to the repository. Fame and fortune will be soon to follow.</p>
 <p>Hopefully this article has provided enough information to help you get even more work done in R. And remember, we all progress when we share, so hopefully you will be able to add to the functionality available to the whole community.</p>
