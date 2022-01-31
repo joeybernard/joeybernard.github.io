@@ -7,150 +7,154 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://joeybernard.github.io/</loc>
-  <lastmod>2021-10-08T16:21:00Z</lastmod>
+  <lastmod>2022-01-31T01:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/2020/</loc>
-  <lastmod>2020-01-13T14:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/2021/</loc>
-  <lastmod>2021-10-08T16:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://joeybernard.github.io/2022/</loc>
+  <lastmod>2022-01-31T01:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/archive.html</loc>
-  <lastmod>2021-10-08T16:21:00Z</lastmod>
+  <lastmod>2022-01-31T01:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/categories/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/categories/cat_howto/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/categories/cat_news/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/categories/devtools/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/categories/git-admin/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/categories/news/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/galleries/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/galleries/demo/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/listings/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
- </url>
- <url>
-  <loc>https://joeybernard.github.io/listings/__pycache__/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/listings/hello.py.html</loc>
-  <lastmod>2021-10-08T16:21:00Z</lastmod>
+  <lastmod>2022-01-31T01:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/about-nikola/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/bootstrap-demo/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/charts/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/creating-a-theme/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/dr-nikolas-vendetta/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/extending/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/handbook/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/internals/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/listings-demo/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/path-handlers/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/quickref/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/quickstart/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/social_buttons/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/pages/theming/</loc>
-  <lastmod>2020-01-13T12:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/posts/a-good-front-end-for-r%20/</loc>
-  <lastmod>2021-10-08T16:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/posts/bad-information-from-a-long-time-ago/</loc>
-  <lastmod>2021-10-08T16:21:00Z</lastmod>
+  <lastmod>2022-01-31T01:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/posts/github-satellite-2020/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/posts/handling-r-packages/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://joeybernard.github.io/posts/hp-has-died-to-me/</loc>
+  <lastmod>2022-01-31T01:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/posts/new-intro/</loc>
-  <lastmod>2020-01-13T14:46:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/posts/o-problems-in-bash/</loc>
-  <lastmod>2021-10-08T16:21:00Z</lastmod>
+  <lastmod>2021-03-15T01:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/posts/statistics-with-r/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://joeybernard.github.io/posts/using-git-for-your-config/</loc>
-  <lastmod>2020-10-19T13:21:00Z</lastmod>
+  <lastmod>2021-01-22T14:12:00Z</lastmod>
  </url>
 </urlset>
