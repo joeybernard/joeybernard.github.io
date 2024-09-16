@@ -6,6 +6,7 @@
 [Params]
    author = "Joey Bernard"
    description = "Just a regular guy"
+   paginate = 8
 
 [[Params.social]]
   icon = "github"
