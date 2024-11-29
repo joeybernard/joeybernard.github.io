@@ -1,5 +1,5 @@
 ---
-title = This a second test post
+title: This a second test post
 ---
 
 This a second test.
