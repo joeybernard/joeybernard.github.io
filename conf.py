@@ -156,12 +156,13 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootblog4"
+#THEME = "bootblog4"
+THEME = "hack"
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
 # as an accent color (the default ones don’t). Must be a HEX value.
-THEME_COLOR = '#5670d4'
+#THEME_COLOR = '#5670d4'
 
 # Theme configuration. Fully theme-dependent. (translatable)
 # Samples for bootblog4 (enabled) and bootstrap4 (commented) follow.
@@ -1413,3 +1414,6 @@ GLOBAL_CONTEXT = {}
 # GLOBAL_CONTEXT as parameter when the template is about to be
 # rendered
 GLOBAL_CONTEXT_FILLER = []
+
+GLOBAL_CONTEXT['HACK_VARIANT'] = 'dark'
+
