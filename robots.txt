@@ -1,0 +1,4 @@
+Sitemap: https://joeybernard.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: joeybernard.github.io
