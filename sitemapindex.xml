@@ -6,15 +6,11 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://joeybernard.github.io/galleries/rss.xml</loc>
-  <lastmod>2025-03-24T16:04:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://joeybernard.github.io/rss.xml</loc>
-  <lastmod>2025-03-24T16:06:00Z</lastmod>
+  <lastmod>2025-03-25T14:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://joeybernard.github.io/sitemap.xml</loc>
-  <lastmod>2025-03-24T16:06:00Z</lastmod>
+  <lastmod>2025-03-25T14:00:00Z</lastmod>
  </sitemap>
 </sitemapindex>
