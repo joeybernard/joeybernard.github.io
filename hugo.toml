@@ -3,3 +3,7 @@ languageCode = 'en-us'
 title = 'The Rational Coder'
 theme = 'ananke'
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
