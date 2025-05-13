@@ -3,7 +3,8 @@ languageCode = 'en-us'
 title = 'The Rational Coder'
 theme = 'ananke'
 
+sectionPagesMenu = 'main'
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
-
