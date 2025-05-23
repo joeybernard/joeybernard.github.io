@@ -2,7 +2,7 @@
 title: Android as a Dev Machine
 date: 2025-05-23 13:00:00
 categories: [blog, programming]
-tags: [android programming development]     # TAG names should always be lowercase
+tags: [android, programming, development]     # TAG names should always be lowercase
 description: Setting up termux for a portable development machine.
 #math: true  #For math content
 ---
