@@ -32,6 +32,7 @@ github_username:  joeybernard
 remote_theme: pages-themes/hacker@0.2.0
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
