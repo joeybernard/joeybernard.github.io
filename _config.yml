@@ -54,7 +54,7 @@ plugins:
 #   - vendor/ruby/
 
 minima:
-  skin: dark
-  hide_site_feed_link: false
+  #skin: dark
+  #hide_site_feed_link: false
   show_excerpts: true
 
