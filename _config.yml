@@ -52,3 +52,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+minima:
+  skin: dark
+  hide_site_feed_link: false
+  show_excerpts: true
+
