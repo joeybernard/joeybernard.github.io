@@ -29,7 +29,7 @@ github_username:  joeybernard
 
 # Build settings
 #theme: minima
-theme: jekyll-theme-architect
+remote_theme: hacker
 plugins:
   - jekyll-feed
 
