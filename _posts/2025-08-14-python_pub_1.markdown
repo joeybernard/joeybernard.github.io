@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python Pub 1
+title: "Python Pub 1"
 date: 2025-08-14
 categories: blog
 tags: [python,programming]
