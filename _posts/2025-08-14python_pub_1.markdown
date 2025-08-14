@@ -1,0 +1,128 @@
+---
+layout: post
+title: Python Pub 1
+date: 2025-08-14
+categories: blog
+tags: [python,programming]
+---
+## Virtual Environments
+
+Because Python uses a massive community of modules in order to do work, you can quickly end up with a huge mess of installed modules, with no clear idea of what project uses which modules. They way around this problem is to use virtual environments. In this way, you can corral the installed modules for a specific project into a single environment. There are several options available for managing virtual environments. The default standard one is venv. It should already be available with Python. There are modules available to work with venv that you might want to explore.
+
+Creating a new virtual environment can be done with
+```python
+python -m venv /path/to/directory
+```
+The last parameter is the path to the directory name that you want to use for this virtual environment. You probably want to use it in the current directory, giving the directory name as your project name.
+
+You have the option of having symlinks to Python and libraries or having them copied into your virtual environment. The default is different in different environments. My personal preference is to copy, so that there is no chance of changes when you do system updates. You can do this with the command
+```python
+python -m venv --copies ./my_venv
+```
+
+Once you are ready to use the virtual environment, you can activate it with one of the following commands, based on your operating system.
+- Windows
+```
+.\my_venv\Scripts\activate.bat
+```
+- PowerShell
+```
+.\my_venv\Scripts\activate.ps1
+```
+---
+- Bash
+```
+. ./my_venv/Scripts/activate
+```
+
+With the environment active, Python uses your folder to hold and search for modules. pip installs new modules here in this location. While you can install modules one at a time, it is a good practice to keep a list of everything that you need for your project. While the filename of this text file doesn't matter, the usual filename used is "requirements.txt". You can install all required modules in one step with
+```
+pip install -r requirements.txt
+```
+
+Once you are all done, you can deactivate your virtual environment with one of the following commands:
+- Windows
+```
+deactivate.bat
+```
+- PowerShell
+```
+deactivate
+```
+- Bash
+```
+deactivate
+```
+Note you don't need to add the path to the deactivate script, since activation added it to your path.
+
+
+
+---
+## Plotting on a globe
+
+The main way to do plotting on Python is through matplotlib. This library has a lot of functionality available. There are also lots of extra modules that build on the core of matplotlib.In this example, we will use basemap to manage the globe part of the plot.
+
+The first step is installation. You can simply use pip, 
+```
+pip install matplotlib
+pip install basemap
+```
+
+For our example plot, we have some initial imports to get the code that we will need.
+```python
+from mpl_toolkits.basemap import Basemap
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
+The next step is to initialize the map. We set up the map projection that we want to use, and also set the coordinates above which the camera will be positioned.
+```python
+# set up orthographic map projection with
+# perspective of satellite looking down at 45N, 100W.
+# use low resolution coastlines.
+map = Basemap(projection='ortho',lat_0=45,lon_0=-100,resolution='l')
+```
+
+The enxt step is to create the map components that we want to display for our plot.
+```python
+# draw coastlines, country boundaries, fill continents.
+map.drawcoastlines(linewidth=0.25)
+map.drawcountries(linewidth=0.25)
+map.fillcontinents(color='coral',lake_color='aqua')
+```
+
+Along with major components, there also map details that can be configured for your plot.
+```python
+# draw the edge of the map projection region (the projection limb)
+map.drawmapboundary(fill_color='aqua')
+# draw lat/lon grid lines every 30 degrees.
+map.drawmeridians(np.arange(0,360,30))
+map.drawparallels(np.arange(-90,90,30))
+```
+
+Now that we have our map ready, we can get data ready to plot (in this case, it is made up data).
+```python
+# make up some data on a regular lat/lon grid.
+nlats = 73; nlons = 145; delta = 2.*np.pi/(nlons-1)
+lats = (0.5*np.pi-delta*np.indices((nlats,nlons))[0,:,:])
+lons = (delta*np.indices((nlats,nlons))[1,:,:])
+wave = 0.75*(np.sin(2.*lats)**8*np.cos(4.*lons))
+mean = 0.5*np.cos(2.*lats)*((np.sin(2.*lats))**2 + 2.)
+```
+
+The last step is to plot your data and to show the resultant plot.
+```python
+# compute native map projection coordinates of lat/lon grid.
+x, y = map(lons*180./np.pi, lats*180./np.pi)
+# contour data over the map.
+cs = map.contour(x,y,wave+mean,15,linewidths=1.5)
+plt.title('contour lines over filled continent background')
+plt.show()
+```
+
+You should get something like the following:
+---
+![Plotting on a globe](/assets/contour1.png)
+
+Hopefully this short piece will give you the encouragement to go see what you can do with matplotlib. You can find a huge gallery of examples at [https://matplotlib.org/stable/gallery/index.html](https://matplotlib.org/stable/gallery/index.html).
+
