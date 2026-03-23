@@ -1,6 +1,6 @@
 baseurl = "https://joeybernard.github.io"
 title = "The Rational Coder"
-theme = "hugo-coder"
+theme = "hugo-theme-m10c"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
@@ -12,8 +12,8 @@ pagerSize = 20
 #[services.disqus]
 #shortname = "yourdiscussshortname"
 
-[markup.highlight]
-style = "github-dark"
+#[markup.highlight]
+#style = "github-dark"
 
 [params]
   author = "Joey Bernard"
