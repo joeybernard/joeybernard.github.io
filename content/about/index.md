@@ -12,4 +12,4 @@ Along with a diploma in university teaching, I am also a certified instructor wi
 
 I also have done a fair bit of writing. I used to have columns in *Linux Journal* and *Linux User and Developer*. I wrote a small book on Python recipes. I kind of miss the writing process, so I am back to blogging. Just in order to scratch this particular itch.
 
-In my personal life, I like figuring things out. Taking things apart, fixing broken things, making new things. I like wodd carving, which the scars on my hands will attest to. I like hiking and camping and canoeing. I do powerlifting and karate as my main form of exercise, and if you are ever looking for a gift, a nice Irish whiskey of a nice Scottish single malt will always be appreciated.
+In my personal life, I like figuring things out. Taking things apart, fixing broken things, making new things. I like wood carving, which the scars on my hands will attest to. I like hiking and camping and canoeing. I do powerlifting and karate as my main form of exercise, and if you are ever looking for a gift, a nice Irish whiskey or a nice Scottish single malt will always be appreciated.
