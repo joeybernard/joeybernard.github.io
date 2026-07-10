@@ -20,7 +20,7 @@ pagerSize = 8
   info = "Full Stack DevOps and Other Weird Stuff"
   description = "Joey Bernard's personal website"
   keywords = "blog,developer,personal"
-  avatar = "dragon_awen.png"
+  avatar = "/static/dragon_awen.png"
   #gravatar = "druid.bernard@gmail.com"
 
   faviconSVG = "/img/favicon.svg"
@@ -80,11 +80,11 @@ pagerSize = 8
 [[menu.main]]
   name = "Blog"
   weight = 1
-  url  = "posts/"
+  url  = "/posts/"
 [[menu.main]]
   name = "About"
   weight = 2
-  url = "about/"
+  url = "/about/"
 [[menu.main]]
   name = "Tags"
   identifier = "tags"
