@@ -6,7 +6,7 @@ defaultcontentlanguage = "en"
 
 
 [pagination]
-pagerSize = 20
+pagerSize = 8
 
 [services]
 #[services.disqus]
@@ -46,10 +46,25 @@ pagerSize = 20
 
 # Social links
 [[params.social]]
+  name = "Bluesky"
+  icon = "brand-bluesky"
+  weight = 1
+  url = "https://bsky.app/profile/joeybernard.bsky.social"
+[[params.social]]
+  name = "Mastodon"
+  icon = "brand-mastodon"
+  weight = 1
+  url = "https://mastodon.social/@joeybernard"
+[[params.social]]
   name = "Github"
-  icon = "fa-brands fa-github fa-2x"
+  icon = "brand-github"
   weight = 1
   url = "https://github.com/joeybernard/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "brand-linkedin"
+  weight = 1
+  url = "https://www.linkedin.com/in/joey-bernard-18b8791/"
 #[[params.social]]
 #  name = "Gitlab"
 #  icon = "fa-brands fa-gitlab fa-2x"
@@ -57,7 +72,7 @@ pagerSize = 20
 #  url = "https://gitlab.com/johndoe/"
 [[params.social]]
   name = "Twitter"
-  icon = "fa-brands fa-x-twitter fa-2x"
+  icon = "brand-x"
   weight = 3
   url = "https://twitter.com/joeybernard/"
 
@@ -70,3 +85,7 @@ pagerSize = 20
   name = "About"
   weight = 2
   url = "about/"
+[[menu.main]]
+  name = "Tags"
+  identifier = "tags"
+  url = "/tags/"
