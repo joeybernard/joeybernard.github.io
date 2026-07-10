@@ -20,7 +20,7 @@ pagerSize = 8
   info = "Full Stack DevOps and Other Weird Stuff"
   description = "Joey Bernard's personal website"
   keywords = "blog,developer,personal"
-  avatar = "/static/dragon_awen.png"
+  avatar = "dragon_awen.png"
   #gravatar = "druid.bernard@gmail.com"
 
   faviconSVG = "/img/favicon.svg"
